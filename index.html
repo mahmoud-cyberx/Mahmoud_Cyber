@@ -1,0 +1,2840 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+   <!-- ====== أساسيّات الميتا ====== -->
+   <meta charset="utf-8" />
+   <meta name="viewport" content="width=device-width, initial-scale=1" />
+   <title>Mahmoud Mohamed - مطور ويب وأمن سيبراني</title>
+   <meta name="description" content="الموقع الرسمي @Mahmoud_Cyber - مطوّر ويب وأمن سيبراني محترف. خدمات تطوير الويب، تطبيقات آمنة، استشارات أمنية." />
+   <meta name="keywords" content="@Mahmoud_Cyber, مطور ويب, أمن سيبراني, Mahmoud Mohamed, تطوير مواقع, برمجة, حماية مواقع, مصر, دورات برمجة, كود, تعلم البرمجة, تطوير تطبيقات, أمن المعلومات, استشارات أمنية, اختبار الاختراق, تطوير واجهات, تطوير back-end, React, Node.js, JavaScript, HTML, CSS, تصميم مواقع, SEO, تحسين محركات البحث, استضافة مواقع, DevOps, تطوير برمجيات, حلول تقنية, برمجة آمنة, تشفير البيانات, حماية البيانات, منع الاختراق, أمن الشبكات, تطوير متجر إلكتروني, ووردبريس, Laravel, PHP, Python, تطوير جافا سكريبت" />
+   <link rel="canonical" href="https://mahmoud-cyberx.github.io/Mahmoud_Cyber/" />
+   <meta name="robots" content="index,follow" />
+   
+   <!-- بيانات مُنظّمة لتحسين محركات البحث -->
+   <script type="application/ld+json">
+   {
+     "@context": "https://schema.org",
+     "@type": "Person",
+     "name": "Mahmoud Mohamed",
+     "alternateName": "محمود محمد",
+     "url": "https://mahmoud-cyberx.github.io/Mahmoud_Cyber/",
+     "image": "https://mahmoud-cyberx.github.io/Mahmoud_Cyber/@Mahmoud_Cyber.jpg",
+     "jobTitle": "مطور ويب وأخصائي أمن سيبراني",
+     "worksFor": {
+       "@type": "Organization",
+       "name": "مستقل"
+     },
+     "address": {
+       "@type": "PostalAddress",
+       "addressRegion": "Sharkia",
+       "addressCountry": "Egypt"
+     },
+     "sameAs": [
+       "https://www.facebook.com/profile.php?id=61582680613004",
+       "https://t.me/mg_Cyber_X",
+       "https://www.youtube.com/@Mahmoud_Eng_Official",
+       "https://www.instagram.com/mahmoud_eng_official/?__pwa=1",
+       "https://www.linkedin.com/in/mahmoud-mohamed-aa5b76390?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
+       "https://www.google.com/maps/place/Mahmoud+Mohamed/@30.5335535,31.4976162,1395m/data=!3m1!1e3!4m6!3m5!1s0x14f7fb005e3d7c77:0xc8baa7af5ae1ff2f!8m2!3d30.5336023!4d31.4976002!16s%2Fg%2F11wxkl_1mr?authuser=0&entry=ttu&g_ep=EgoyMDI5MTAxNC4wIKXMDSoASAFQAw%3D%3D"
+     ]
+   }
+   </script>
+
+   <!-- Open Graph -->
+   <meta property="og:type" content="website" />
+   <meta property="og:title" content="Mahmoud Mohamed - مطور ويب وأمن سيبراني" />
+   <meta property="og:description" content="الموقع الرسمي @Mahmoud_Cyber - مطوّر ويب وأمن سيبراني محترف. خدمات تطوير الويب، تطبيقات آمنة، استشارات أمنية." />
+   <meta property="og:url" content="https://mahmoud-cyberx.github.io/Mahmoud_Cyber/" />
+   <meta property="og:image" content="https://mahmoud-cyberx.github.io/Mahmoud_Cyber/@Mahmoud_Cyber.jpg" />
+   <meta property="og:image:width" content="1200" />
+   <meta property="og:image:height" content="630" />
+   <meta property="og:locale" content="ar_EG" />
+   <meta property="og:site_name" content="محمود محمد" />
+
+   <!-- Twitter -->
+   <meta name="twitter:card" content="summary_large_image" />
+   <meta name="twitter:title" content="Mahmoud Mohamed - مطور ويب وأمن سيبراني" />
+   <meta name="twitter:description" content="الموقع الرسمي @Mahmoud_Cyber - مطوّر ويب وأمن سيبراني محترف." />
+   <meta name="twitter:image" content="https://mahmoud-cyberx.github.io/Mahmoud_Cyber/@Mahmoud_Cyber.jpg" />
+   <meta name="twitter:creator" content="محمود محمد" />
+
+   <!-- Tailwind CSS -->
+   <script src="https://cdn.tailwindcss.com"></script>
+   <!-- AOS Animation Library -->
+   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+   <!-- Font Awesome Icons -->
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+   <!-- Google Fonts -->
+   <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+   
+   <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        primary: {
+                            50: '#eff6ff',
+                            100: '#dbeafe',
+                            200: '#bfdbfe',
+                            300: '#93c5fd',
+                            400: '#60a5fa',
+                            500: '#3b82f6',
+                            600: '#2563eb',
+                            700: '#1d4ed8',
+                            800: '#1e40af',
+                            900: '#1e3a8a',
+                        },
+                        secondary: {
+                            50: '#f8fafc',
+                            100: '#f1f5f9',
+                            200: '#e2e8f0',
+                            300: '#cbd5e1',
+                            400: '#94a3b8',
+                            500: '#64748b',
+                            600: '#475569',
+                            700: '#334155',
+                            800: '#1e293b',
+                            900: '#0f172a',
+                        },
+                        accent: {
+                            blue: '#3b82f6',
+                            cyan: '#06b6d4',
+                            green: '#10b981',
+                            emerald: '#059669',
+                            red: '#ef4444',
+                            orange: '#f97316',
+                            yellow: '#f59e0b',
+                            amber: '#d97706',
+                            purple: '#8b5cf6',
+                            pink: '#ec4899',
+                            indigo: '#6366f1'
+                        }
+                    },
+                    fontFamily: {
+                        'cairo': ['Cairo', 'sans-serif']
+                    },
+                    animation: {
+                        'float': 'float 6s ease-in-out infinite',
+                        'pulse-slow': 'pulse 4s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+                        'bounce-slow': 'bounce 3s infinite',
+                        'slide-down': 'slideDown 0.3s ease-out',
+                        'fade-in': 'fadeIn 0.5s ease-out',
+                        'spin-slow': 'spin 3s linear infinite'
+                    },
+                    keyframes: {
+                        float: {
+                            '0%, 100%': { transform: 'translateY(0)' },
+                            '50%': { transform: 'translateY(-15px)' },
+                        },
+                        slideDown: {
+                            '0%': { opacity: '0', transform: 'translateY(-10px)' },
+                            '100%': { opacity: '1', transform: 'translateY(0)' }
+                        },
+                        fadeIn: {
+                            '0%': { opacity: '0' },
+                            '100%': { opacity: '1' }
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    
+    <style>
+        :root {
+            --header-height: 70px;
+            --gradient-primary: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+            --gradient-accent: linear-gradient(135deg, #3b82f6 0%, #6366f1 100%);
+            --gradient-hero: linear-gradient(135deg, rgba(15, 23, 42, 0.95) 0%, rgba(30, 41, 59, 0.9) 100%);
+            --gradient-card: linear-gradient(135deg, #1e293b 0%, #334155 100%);
+            --gradient-light: linear-gradient(135deg, #f8fafc 0%, #f1f5f9 100%);
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Cairo', sans-serif;
+            scroll-behavior: smooth;
+            background-color: #0f172a;
+            color: #e2e8f0;
+            transition: all 0.3s ease;
+            overflow-x: hidden;
+        }
+        
+        body.light-mode {
+            background-color: #f8fafc;
+            color: #1e293b;
+        }
+        
+        /* تحسينات عامة */
+        .section-container {
+            padding: 5rem 1rem;
+        }
+        
+        .section-title {
+            position: relative;
+            display: inline-block;
+            margin-bottom: 3rem;
+            font-size: 2.5rem;
+            font-weight: 800;
+            color: white;
+        }
+        
+        .light-mode .section-title {
+            color: #1e293b;
+        }
+        
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: -15px;
+            right: 0;
+            width: 80px;
+            height: 4px;
+            background: var(--gradient-accent);
+            border-radius: 4px;
+        }
+        
+        .section-title::before {
+            content: '';
+            position: absolute;
+            bottom: -20px;
+            right: 0;
+            width: 120px;
+            height: 2px;
+            background: rgba(59, 130, 246, 0.3);
+            border-radius: 2px;
+        }
+        
+        /* Header Styles */
+        .main-header {
+            background: var(--gradient-primary);
+            backdrop-filter: blur(10px);
+            box-shadow: 0 4px 30px rgba(0, 0, 0, 0.2);
+            height: var(--header-height);
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 1000;
+            transition: all 0.3s ease;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        
+        .light-mode .main-header {
+            background: rgba(248, 250, 252, 0.95);
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid rgba(30, 41, 59, 0.1);
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+        }
+        
+        .header-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 100%;
+            padding: 0 2rem;
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+        
+        /* Brand Styles */
+        .header-brand {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+        
+        .logo-icon {
+            width: 40px;
+            height: 40px;
+            background: var(--gradient-accent);
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.2rem;
+            color: white;
+            box-shadow: 0 4px 15px rgba(59, 130, 246, 0.3);
+        }
+        
+        .brand-text {
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .brand-name {
+            font-size: 1.3rem;
+            font-weight: 800;
+            color: white;
+            line-height: 1.2;
+        }
+        
+        .light-mode .brand-name {
+            color: #1e293b;
+        }
+        
+        .brand-title {
+            font-size: 0.8rem;
+            color: #94a3b8;
+            font-weight: 500;
+        }
+        
+        .light-mode .brand-title {
+            color: #64748b;
+        }
+        
+        /* Search Styles - محسّنة */
+        .search-container {
+            position: relative;
+            width: 100%;
+            max-width: 600px;
+            margin: 0 2rem;
+        }
+        
+        .search-wrapper {
+            position: relative;
+            width: 100%;
+        }
+        
+        .search-box {
+            width: 100%;
+            padding: 0.8rem 3rem 0.8rem 1.5rem;
+            border-radius: 50px;
+            border: 2px solid rgba(59, 130, 246, 0.3);
+            background: rgba(30, 41, 59, 0.7);
+            backdrop-filter: blur(10px);
+            color: white;
+            font-size: 1rem;
+            font-family: 'Cairo', sans-serif;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+        }
+        
+        .light-mode .search-box {
+            background: rgba(255, 255, 255, 0.9);
+            border: 2px solid rgba(59, 130, 246, 0.2);
+            color: #1e293b;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+        }
+        
+        .search-box::placeholder {
+            color: #94a3b8;
+            font-size: 0.9rem;
+        }
+        
+        .light-mode .search-box::placeholder {
+            color: #94a3b8;
+        }
+        
+        .search-box:focus {
+            outline: none;
+            border-color: #3b82f6;
+            background: rgba(30, 41, 59, 0.9);
+            box-shadow: 0 4px 20px rgba(59, 130, 246, 0.3);
+        }
+        
+        .light-mode .search-box:focus {
+            background: white;
+            box-shadow: 0 4px 20px rgba(59, 130, 246, 0.2);
+        }
+        
+        .search-button {
+            position: absolute;
+            left: 15px;
+            top: 50%;
+            transform: translateY(-50%);
+            background: transparent;
+            border: none;
+            color: #94a3b8;
+            cursor: pointer;
+            font-size: 1.1rem;
+            transition: color 0.3s ease;
+        }
+        
+        .search-button:hover {
+            color: #3b82f6;
+        }
+        
+        .search-clear {
+            position: absolute;
+            right: 15px;
+            top: 50%;
+            transform: translateY(-50%);
+            background: transparent;
+            border: none;
+            color: #94a3b8;
+            cursor: pointer;
+            font-size: 1rem;
+            opacity: 0;
+            visibility: hidden;
+            transition: all 0.3s ease;
+        }
+        
+        .search-clear.show {
+            opacity: 1;
+            visibility: visible;
+        }
+        
+        .search-clear:hover {
+            color: #ef4444;
+        }
+        
+        /* Search Results - محسّنة */
+        .search-results {
+            position: absolute;
+            top: 100%;
+            left: 0;
+            right: 0;
+            background: #1e293b;
+            border-radius: 20px;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
+            margin-top: 10px;
+            overflow: hidden;
+            display: none;
+            z-index: 1000;
+            max-height: 500px;
+            overflow-y: auto;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(20px);
+            animation: slideDown 0.3s ease-out;
+        }
+        
+        .light-mode .search-results {
+            background: rgba(255, 255, 255, 0.98);
+            border: 1px solid rgba(30, 41, 59, 0.1);
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+        }
+        
+        .search-results-header {
+            padding: 1.2rem 1.5rem;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .light-mode .search-results-header {
+            border-bottom: 1px solid rgba(30, 41, 59, 0.1);
+        }
+        
+        .search-results-title {
+            font-weight: 700;
+            font-size: 1.1rem;
+            color: white;
+        }
+        
+        .light-mode .search-results-title {
+            color: #1e293b;
+        }
+        
+        .search-results-count {
+            font-size: 0.9rem;
+            color: #94a3b8;
+            background: rgba(59, 130, 246, 0.1);
+            padding: 0.2rem 0.8rem;
+            border-radius: 20px;
+        }
+        
+        .search-result-item {
+            padding: 1.2rem 1.5rem;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+            cursor: pointer;
+            transition: all 0.2s ease;
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+        
+        .light-mode .search-result-item {
+            border-bottom: 1px solid rgba(30, 41, 59, 0.05);
+        }
+        
+        .search-result-item:last-child {
+            border-bottom: none;
+        }
+        
+        .search-result-item:hover {
+            background: rgba(59, 130, 246, 0.1);
+            padding-right: 1.8rem;
+        }
+        
+        .search-result-icon {
+            width: 40px;
+            height: 40px;
+            background: rgba(59, 130, 246, 0.2);
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #3b82f6;
+            font-size: 1.2rem;
+        }
+        
+        .search-result-content {
+            flex: 1;
+        }
+        
+        .search-result-title {
+            font-weight: 700;
+            font-size: 1rem;
+            color: white;
+            margin-bottom: 0.3rem;
+        }
+        
+        .light-mode .search-result-title {
+            color: #1e293b;
+        }
+        
+        .search-result-description {
+            font-size: 0.9rem;
+            color: #94a3b8;
+            line-height: 1.4;
+        }
+        
+        .search-result-arrow {
+            color: #94a3b8;
+            font-size: 0.9rem;
+            opacity: 0;
+            transition: all 0.3s ease;
+        }
+        
+        .search-result-item:hover .search-result-arrow {
+            opacity: 1;
+            color: #3b82f6;
+        }
+        
+        .search-no-results {
+            padding: 3rem 1.5rem;
+            text-align: center;
+            color: #94a3b8;
+        }
+        
+        .search-no-results i {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            opacity: 0.5;
+        }
+        
+        /* Social Icons - محسّنة */
+        .social-icons-container {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+        
+        .social-icon {
+            width: 42px;
+            height: 42px;
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 1.1rem;
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+        }
+        
+        .social-icon::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: var(--gradient-accent);
+            opacity: 0.2;
+            transition: opacity 0.3s ease;
+        }
+        
+        .social-icon:hover::before {
+            opacity: 0.4;
+        }
+        
+        .social-icon i {
+            position: relative;
+            z-index: 1;
+        }
+        
+        .social-icon:hover {
+            transform: translateY(-3px) scale(1.05);
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+        }
+        
+        /* Facebook */
+        .social-icon.facebook {
+            background: #1877f2;
+        }
+        
+        /* Telegram */
+        .social-icon.telegram {
+            background: #0088cc;
+        }
+        
+        /* Instagram */
+        .social-icon.instagram {
+            background: linear-gradient(45deg, #405de6, #5851db, #833ab4, #c13584, #e1306c, #fd1d1d);
+        }
+        
+        /* YouTube */
+        .social-icon.youtube {
+            background: #ff0000;
+        }
+        
+        /* LinkedIn */
+        .social-icon.linkedin {
+            background: #0077b5;
+        }
+        
+        /* Map */
+        .social-icon.map {
+            background: #34a853;
+        }
+        
+        /* Theme Toggle */
+        .theme-toggle {
+            width: 42px;
+            height: 42px;
+            border-radius: 12px;
+            background: rgba(255, 255, 255, 0.1);
+            border: none;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            color: white;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+        }
+        
+        .light-mode .theme-toggle {
+            background: rgba(30, 41, 59, 0.1);
+            color: #1e293b;
+        }
+        
+        .theme-toggle:hover {
+            transform: rotate(30deg);
+            background: rgba(59, 130, 246, 0.2);
+        }
+        
+        /* Mobile Menu */
+        .mobile-menu-button {
+            display: none;
+            width: 40px;
+            height: 40px;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            gap: 6px;
+            background: transparent;
+            border: none;
+            cursor: pointer;
+            padding: 0;
+        }
+        
+        .mobile-menu-button span {
+            width: 25px;
+            height: 2px;
+            background: white;
+            border-radius: 2px;
+            transition: all 0.3s ease;
+            display: block;
+        }
+        
+        .light-mode .mobile-menu-button span {
+            background: #1e293b;
+        }
+        
+        .mobile-menu-button.active span:nth-child(1) {
+            transform: rotate(45deg) translate(6px, 6px);
+        }
+        
+        .mobile-menu-button.active span:nth-child(2) {
+            opacity: 0;
+        }
+        
+        .mobile-menu-button.active span:nth-child(3) {
+            transform: rotate(-45deg) translate(6px, -6px);
+        }
+        
+        .mobile-menu {
+            position: fixed;
+            top: var(--header-height);
+            right: -100%;
+            width: 300px;
+            height: calc(100vh - var(--header-height));
+            background: #1e293b;
+            backdrop-filter: blur(20px);
+            box-shadow: -5px 0 30px rgba(0, 0, 0, 0.2);
+            transition: right 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            z-index: 999;
+            padding: 2rem;
+            overflow-y: auto;
+            border-left: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        
+        .light-mode .mobile-menu {
+            background: rgba(255, 255, 255, 0.98);
+            border-left: 1px solid rgba(30, 41, 59, 0.1);
+        }
+        
+        .mobile-menu.open {
+            right: 0;
+        }
+        
+        .mobile-menu-nav {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+            margin-bottom: 2rem;
+        }
+        
+        .mobile-menu-link {
+            padding: 1rem;
+            border-radius: 12px;
+            color: white;
+            font-size: 1.1rem;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+        
+        .light-mode .mobile-menu-link {
+            color: #1e293b;
+        }
+        
+        .mobile-menu-link:hover {
+            background: rgba(59, 130, 246, 0.1);
+            color: #3b82f6;
+            padding-right: 1.5rem;
+        }
+        
+        .mobile-menu-link i {
+            width: 20px;
+            text-align: center;
+        }
+        
+        /* Hero Section */
+        #home {
+            min-height: 100vh;
+            background: var(--gradient-hero);
+            position: relative;
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+            padding-top: var(--header-height);
+        }
+        
+        .light-mode #home {
+            background: var(--gradient-light);
+        }
+        
+        .hero-container {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 4rem;
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+        
+        .hero-content {
+            flex: 1;
+            max-width: 600px;
+        }
+        
+        .hero-title {
+            font-size: 3.5rem;
+            font-weight: 800;
+            line-height: 1.2;
+            margin-bottom: 1rem;
+            background: linear-gradient(135deg, #3b82f6 0%, #6366f1 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        
+        .hero-subtitle {
+            font-size: 1.8rem;
+            font-weight: 600;
+            color: #94a3b8;
+            margin-bottom: 1.5rem;
+        }
+        
+        .light-mode .hero-subtitle {
+            color: #64748b;
+        }
+        
+        .hero-description {
+            font-size: 1.1rem;
+            line-height: 1.8;
+            color: #cbd5e1;
+            margin-bottom: 2.5rem;
+        }
+        
+        .light-mode .hero-description {
+            color: #475569;
+        }
+        
+        .hero-buttons {
+            display: flex;
+            gap: 1rem;
+            margin-bottom: 3rem;
+        }
+        
+        /* Button Styles */
+        .btn {
+            padding: 0.9rem 2rem;
+            border-radius: 12px;
+            font-weight: 700;
+            font-size: 1rem;
+            transition: all 0.3s ease;
+            cursor: pointer;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.5rem;
+            border: none;
+            font-family: 'Cairo', sans-serif;
+        }
+        
+        .btn-primary {
+            background: var(--gradient-accent);
+            color: white;
+            box-shadow: 0 4px 20px rgba(59, 130, 246, 0.3);
+        }
+        
+        .btn-primary:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 30px rgba(59, 130, 246, 0.4);
+        }
+        
+        .btn-secondary {
+            background: transparent;
+            color: white;
+            border: 2px solid rgba(255, 255, 255, 0.3);
+        }
+        
+        .light-mode .btn-secondary {
+            color: #1e293b;
+            border: 2px solid rgba(30, 41, 59, 0.3);
+        }
+        
+        .btn-secondary:hover {
+            background: rgba(255, 255, 255, 0.1);
+            border-color: rgba(255, 255, 255, 0.5);
+            transform: translateY(-3px);
+        }
+        
+        .light-mode .btn-secondary:hover {
+            background: rgba(30, 41, 59, 0.05);
+            border-color: rgba(30, 41, 59, 0.5);
+        }
+        
+        .hero-social {
+            display: flex;
+            gap: 1rem;
+        }
+        
+        /* Profile Image */
+        .hero-image {
+            flex: 1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        
+        .profile-image-container {
+            position: relative;
+            width: 400px;
+            height: 400px;
+        }
+        
+        .profile-image-wrapper {
+            position: relative;
+            width: 100%;
+            height: 100%;
+            border-radius: 30px;
+            overflow: hidden;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.4);
+            animation: float 6s ease-in-out infinite;
+        }
+        
+        .profile-image {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+        
+        .profile-image-wrapper:hover .profile-image {
+            transform: scale(1.05);
+        }
+        
+        .profile-badge {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            background: var(--gradient-accent);
+            color: white;
+            padding: 0.8rem 1.5rem;
+            border-radius: 50px;
+            font-weight: 700;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+            z-index: 2;
+            animation: pulse-slow 2s infinite;
+        }
+        
+        /* Statistics */
+        .stats-container {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 2rem;
+            margin-top: 4rem;
+        }
+        
+        .stat-card {
+            background: var(--gradient-card);
+            border-radius: 20px;
+            padding: 2rem;
+            text-align: center;
+            transition: all 0.3s ease;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+        }
+        
+        .light-mode .stat-card {
+            background: white;
+            border: 1px solid rgba(30, 41, 59, 0.1);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+        }
+        
+        .stat-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+        }
+        
+        .stat-icon {
+            width: 60px;
+            height: 60px;
+            background: rgba(59, 130, 246, 0.2);
+            border-radius: 15px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 1rem;
+            color: #3b82f6;
+            font-size: 1.8rem;
+        }
+        
+        .stat-number {
+            font-size: 2.5rem;
+            font-weight: 800;
+            color: white;
+            margin-bottom: 0.5rem;
+            background: linear-gradient(135deg, #3b82f6 0%, #6366f1 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        
+        .light-mode .stat-number {
+            background: linear-gradient(135deg, #3b82f6 0%, #6366f1 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        
+        .stat-label {
+            color: #94a3b8;
+            font-size: 1rem;
+        }
+        
+        .light-mode .stat-label {
+            color: #64748b;
+        }
+        
+        /* Skills Section */
+        .skills-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            margin-top: 3rem;
+        }
+        
+        .skill-category {
+            background: var(--gradient-card);
+            border-radius: 25px;
+            padding: 2.5rem;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2);
+        }
+        
+        .light-mode .skill-category {
+            background: white;
+            border: 1px solid rgba(30, 41, 59, 0.1);
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.05);
+        }
+        
+        .skill-category-title {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: white;
+            margin-bottom: 2rem;
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+        
+        .light-mode .skill-category-title {
+            color: #1e293b;
+        }
+        
+        .skill-category-title i {
+            color: #3b82f6;
+            font-size: 1.8rem;
+        }
+        
+        .skill-item {
+            margin-bottom: 2rem;
+        }
+        
+        .skill-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 0.8rem;
+        }
+        
+        .skill-name {
+            font-weight: 600;
+            color: white;
+            font-size: 1.1rem;
+        }
+        
+        .light-mode .skill-name {
+            color: #1e293b;
+        }
+        
+        .skill-percentage {
+            color: #3b82f6;
+            font-weight: 700;
+            font-size: 1.1rem;
+        }
+        
+        .skill-bar {
+            height: 12px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 10px;
+            overflow: hidden;
+        }
+        
+        .light-mode .skill-bar {
+            background: rgba(30, 41, 59, 0.1);
+        }
+        
+        .skill-progress {
+            height: 100%;
+            border-radius: 10px;
+            background: var(--gradient-accent);
+            transition: width 1.5s ease-out;
+        }
+        
+        /* Projects Section */
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+        
+        .project-card {
+            background: var(--gradient-card);
+            border-radius: 25px;
+            overflow: hidden;
+            transition: all 0.4s ease;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2);
+        }
+        
+        .light-mode .project-card {
+            background: white;
+            border: 1px solid rgba(30, 41, 59, 0.1);
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.05);
+        }
+        
+        .project-card:hover {
+            transform: translateY(-15px);
+            box-shadow: 0 25px 60px rgba(0, 0, 0, 0.3);
+        }
+        
+        .project-image {
+            height: 220px;
+            overflow: hidden;
+        }
+        
+        .project-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+        
+        .project-card:hover .project-image img {
+            transform: scale(1.1);
+        }
+        
+        .project-content {
+            padding: 2rem;
+        }
+        
+        .project-title {
+            font-size: 1.4rem;
+            font-weight: 700;
+            color: white;
+            margin-bottom: 1rem;
+        }
+        
+        .light-mode .project-title {
+            color: #1e293b;
+        }
+        
+        .project-description {
+            color: #94a3b8;
+            line-height: 1.6;
+            margin-bottom: 1.5rem;
+        }
+        
+        .light-mode .project-description {
+            color: #64748b;
+        }
+        
+        .project-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.7rem;
+            margin-bottom: 1.5rem;
+        }
+        
+        .project-tag {
+            padding: 0.5rem 1rem;
+            background: rgba(59, 130, 246, 0.2);
+            color: #3b82f6;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            font-weight: 600;
+        }
+        
+        .project-actions {
+            display: flex;
+            gap: 1rem;
+        }
+        
+        .project-btn {
+            flex: 1;
+            padding: 0.8rem;
+            border-radius: 12px;
+            font-weight: 600;
+            text-align: center;
+            transition: all 0.3s ease;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.5rem;
+        }
+        
+        .project-btn.demo {
+            background: var(--gradient-accent);
+            color: white;
+        }
+        
+        .project-btn.demo:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 25px rgba(59, 130, 246, 0.3);
+        }
+        
+        .project-btn.download {
+            background: rgba(255, 255, 255, 0.1);
+            color: white;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+        
+        .light-mode .project-btn.download {
+            background: rgba(30, 41, 59, 0.05);
+            color: #1e293b;
+            border: 1px solid rgba(30, 41, 59, 0.2);
+        }
+        
+        .project-btn.download:hover {
+            background: rgba(59, 130, 246, 0.2);
+            border-color: #3b82f6;
+        }
+        
+        /* Contact Section */
+        .contact-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            margin-top: 3rem;
+        }
+        
+        .contact-info {
+            background: var(--gradient-card);
+            border-radius: 25px;
+            padding: 2.5rem;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2);
+        }
+        
+        .light-mode .contact-info {
+            background: white;
+            border: 1px solid rgba(30, 41, 59, 0.1);
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.05);
+        }
+        
+        .contact-method {
+            display: flex;
+            align-items: center;
+            gap: 1.5rem;
+            margin-bottom: 2rem;
+            padding: 1.5rem;
+            border-radius: 15px;
+            transition: all 0.3s ease;
+            cursor: pointer;
+        }
+        
+        .contact-method:hover {
+            background: rgba(59, 130, 246, 0.1);
+            transform: translateX(-10px);
+        }
+        
+        .contact-icon {
+            width: 60px;
+            height: 60px;
+            background: rgba(59, 130, 246, 0.2);
+            border-radius: 15px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #3b82f6;
+            font-size: 1.5rem;
+        }
+        
+        .contact-details h4 {
+            font-size: 1.2rem;
+            font-weight: 700;
+            color: white;
+            margin-bottom: 0.5rem;
+        }
+        
+        .light-mode .contact-details h4 {
+            color: #1e293b;
+        }
+        
+        .contact-details p {
+            color: #94a3b8;
+            font-size: 1rem;
+        }
+        
+        .light-mode .contact-details p {
+            color: #64748b;
+        }
+        
+        /* Contact Form */
+        .contact-form {
+            background: var(--gradient-card);
+            border-radius: 25px;
+            padding: 2.5rem;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2);
+        }
+        
+        .light-mode .contact-form {
+            background: white;
+            border: 1px solid rgba(30, 41, 59, 0.1);
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.05);
+        }
+        
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+        
+        .form-label {
+            display: block;
+            margin-bottom: 0.8rem;
+            font-weight: 600;
+            color: white;
+            font-size: 1rem;
+        }
+        
+        .light-mode .form-label {
+            color: #1e293b;
+        }
+        
+        .form-input {
+            width: 100%;
+            padding: 1rem 1.5rem;
+            border-radius: 12px;
+            border: 2px solid rgba(255, 255, 255, 0.1);
+            background: rgba(255, 255, 255, 0.05);
+            color: white;
+            font-size: 1rem;
+            font-family: 'Cairo', sans-serif;
+            transition: all 0.3s ease;
+        }
+        
+        .light-mode .form-input {
+            background: rgba(30, 41, 59, 0.05);
+            border: 2px solid rgba(30, 41, 59, 0.1);
+            color: #1e293b;
+        }
+        
+        .form-input:focus {
+            outline: none;
+            border-color: #3b82f6;
+            background: rgba(59, 130, 246, 0.05);
+            box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
+        }
+        
+        .form-textarea {
+            min-height: 150px;
+            resize: vertical;
+        }
+        
+        /* Floating Buttons */
+        .floating-buttons {
+            position: fixed;
+            bottom: 2rem;
+            left: 2rem;
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+            z-index: 100;
+        }
+        
+        .floating-btn {
+            width: 60px;
+            height: 60px;
+            border-radius: 18px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 1.5rem;
+            box-shadow: 0 8px 30px rgba(0, 0, 0, 0.3);
+            cursor: pointer;
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .floating-btn::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: var(--gradient-accent);
+            opacity: 0.9;
+            transition: opacity 0.3s ease;
+        }
+        
+        .floating-btn i {
+            position: relative;
+            z-index: 1;
+        }
+        
+        .floating-btn:hover {
+            transform: translateY(-5px) scale(1.1);
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.4);
+        }
+        
+        .floating-btn:hover::before {
+            opacity: 1;
+        }
+        
+        .floating-btn.whatsapp {
+            background: #25d366;
+        }
+        
+        .floating-btn.whatsapp::before {
+            background: #25d366;
+        }
+        
+        .floating-btn.phone {
+            background: #3b82f6;
+        }
+        
+        .floating-btn.phone::before {
+            background: #3b82f6;
+        }
+        
+        .floating-btn.up {
+            background: #10b981;
+        }
+        
+        .floating-btn.up::before {
+            background: #10b981;
+        }
+        
+        /* Toast Notification */
+        .toast {
+            position: fixed;
+            bottom: 2rem;
+            right: 2rem;
+            background: #10b981;
+            color: white;
+            padding: 1rem 1.5rem;
+            border-radius: 15px;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            z-index: 1000;
+            transform: translateY(100px);
+            opacity: 0;
+            transition: all 0.4s ease;
+        }
+        
+        .toast.show {
+            transform: translateY(0);
+            opacity: 1;
+        }
+        
+        .toast.error {
+            background: #ef4444;
+        }
+        
+        .toast.warning {
+            background: #f59e0b;
+        }
+        
+        /* Responsive Design */
+        @media (max-width: 1200px) {
+            .hero-container {
+                flex-direction: column;
+                text-align: center;
+            }
+            
+            .hero-content {
+                max-width: 100%;
+            }
+            
+            .profile-image-container {
+                width: 350px;
+                height: 350px;
+            }
+            
+            .contact-container {
+                grid-template-columns: 1fr;
+            }
+        }
+        
+        @media (max-width: 992px) {
+            .section-title {
+                font-size: 2.2rem;
+            }
+            
+            .hero-title {
+                font-size: 2.8rem;
+            }
+            
+            .hero-subtitle {
+                font-size: 1.5rem;
+            }
+            
+            .skills-grid {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+            
+            .projects-grid {
+                grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            }
+        }
+        
+        @media (max-width: 768px) {
+            :root {
+                --header-height: 60px;
+            }
+            
+            .header-container {
+                padding: 0 1rem;
+            }
+            
+            .search-container {
+                display: none;
+            }
+            
+            .mobile-menu-button {
+                display: flex;
+            }
+            
+            .social-icons-container {
+                display: none;
+            }
+            
+            .section-container {
+                padding: 3rem 1rem;
+            }
+            
+            .section-title {
+                font-size: 1.8rem;
+                margin-bottom: 2rem;
+            }
+            
+            .stats-container {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 1rem;
+            }
+            
+            .stat-card {
+                padding: 1.5rem;
+            }
+            
+            .hero-title {
+                font-size: 2.2rem;
+            }
+            
+            .hero-subtitle {
+                font-size: 1.2rem;
+            }
+            
+            .hero-buttons {
+                flex-direction: column;
+            }
+            
+            .profile-image-container {
+                width: 280px;
+                height: 280px;
+            }
+            
+            .skill-category {
+                padding: 1.5rem;
+            }
+            
+            .projects-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .floating-buttons {
+                bottom: 1rem;
+                left: 1rem;
+            }
+            
+            .floating-btn {
+                width: 50px;
+                height: 50px;
+                font-size: 1.2rem;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .hero-title {
+                font-size: 1.8rem;
+            }
+            
+            .hero-description {
+                font-size: 1rem;
+            }
+            
+            .profile-image-container {
+                width: 250px;
+                height: 250px;
+            }
+            
+            .stat-card {
+                padding: 1rem;
+            }
+            
+            .stat-number {
+                font-size: 2rem;
+            }
+            
+            .mobile-menu {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body class="dark-mode">
+    <!-- Header -->
+    <header class="main-header">
+        <div class="header-container">
+            <!-- Brand -->
+            <div class="header-brand">
+                <div class="logo-icon">
+                    <i class="fas fa-code"></i>
+                </div>
+                <div class="brand-text">
+                    <div class="brand-name">محمود محمد</div>
+                    <div class="brand-title">Mahmoud_Cyber - مطور ويب وأمن سيبراني</div>
+                </div>
+            </div>
+            
+            <!-- Search -->
+            <div class="search-container">
+                <div class="search-wrapper">
+                    <input type="text" class="search-box" placeholder="ابحث في الموقع...">
+                    <button class="search-button">
+                        <i class="fas fa-search"></i>
+                    </button>
+                    <button class="search-clear">
+                        <i class="fas fa-times"></i>
+                    </button>
+                </div>
+                <div class="search-results">
+                    <div class="search-results-header">
+                        <div class="search-results-title">نتائج البحث</div>
+                        <div class="search-results-count">0 نتيجة</div>
+                    </div>
+                    <div class="search-results-body">
+                        <!-- سيتم إضافة النتائج ديناميكياً -->
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Social Icons & Theme Toggle -->
+            <div class="social-icons-container">
+                <a href="https://www.facebook.com/profile.php?id=61582680613004" class="social-icon facebook" target="_blank">
+                    <i class="fab fa-facebook-f"></i>
+                </a>
+                <a href="https://t.me/mg_Cyber_X" class="social-icon telegram" target="_blank">
+                    <i class="fab fa-telegram"></i>
+                </a>
+                <a href="https://www.instagram.com/mahmoud_eng_official/?__pwa=1" class="social-icon instagram" target="_blank">
+                    <i class="fab fa-instagram"></i>
+                </a>
+                <button id="themeToggle" class="theme-toggle">
+                    <i class="fas fa-moon"></i>
+                </button>
+            </div>
+            
+            <!-- Mobile Menu Button -->
+            <button class="mobile-menu-button">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </header>
+    
+    <!-- Mobile Menu -->
+    <div class="mobile-menu">
+        <nav class="mobile-menu-nav">
+            <a href="#home" class="mobile-menu-link">
+                <i class="fas fa-home"></i>
+                الرئيسية
+            </a>
+            <a href="#about" class="mobile-menu-link">
+                <i class="fas fa-user"></i>
+                عني
+            </a>
+            <a href="#skills" class="mobile-menu-link">
+                <i class="fas fa-code"></i>
+                المهارات
+            </a>
+            <a href="#projects" class="mobile-menu-link">
+                <i class="fas fa-project-diagram"></i>
+                المشاريع
+            </a>
+            <a href="#contact" class="mobile-menu-link">
+                <i class="fas fa-envelope"></i>
+                اتصل بي
+            </a>
+        </nav>
+        
+        <div class="mobile-social-icons">
+            <div style="display: flex; gap: 1rem; justify-content: center; margin-bottom: 2rem;">
+                <a href="https://www.facebook.com/profile.php?id=61582680613004" class="social-icon facebook" target="_blank">
+                    <i class="fab fa-facebook-f"></i>
+                </a>
+                <a href="https://t.me/mg_Cyber_X" class="social-icon telegram" target="_blank">
+                    <i class="fab fa-telegram"></i>
+                </a>
+                <a href="https://www.instagram.com/mahmoud_eng_official/?__pwa=1" class="social-icon instagram" target="_blank">
+                    <i class="fab fa-instagram"></i>
+                </a>
+                <a href="https://www.youtube.com/@Mahmoud_Eng_Official" class="social-icon youtube" target="_blank">
+                    <i class="fab fa-youtube"></i>
+                </a>
+            </div>
+        </div>
+        
+        <button id="mobileThemeToggle" class="btn btn-secondary" style="width: 100%;">
+            <i class="fas fa-moon"></i>
+            تبديل المظهر
+        </button>
+    </div>
+    
+    <!-- Hero Section -->
+    <section id="home" class="section-container">
+        <div class="hero-container">
+            <div class="hero-content">
+                <h1 class="hero-title" data-aos="fade-right">مرحباً، أنا محمود محمد</h1>
+                <h2 class="hero-subtitle" data-aos="fade-right" data-aos-delay="200">مطور ويب ومتخصص أمن سيبراني</h2>
+                <p class="hero-description" data-aos="fade-right" data-aos-delay="400">
+                    أقوم بإنشاء تطبيقات ويب آمنة وعصرية تركز على تجربة المستخدم والأداء المتميز. 
+                    لدي خبرة أكثر من 5 سنوات في تطوير الويب والأمن السيبراني.
+                </p>
+                
+                <div class="hero-buttons" data-aos="fade-up" data-aos-delay="600">
+                    <a href="#projects" class="btn btn-primary">
+                        <i class="fas fa-eye"></i>
+                        عرض أعمالي
+                    </a>
+                    <a href="#contact" class="btn btn-secondary">
+                        <i class="fas fa-envelope"></i>
+                        اتصل بي
+                    </a>
+                </div>
+                
+                <div class="hero-social" data-aos="fade-up" data-aos-delay="800">
+                    <a href="https://www.facebook.com/profile.php?id=61582680613004" class="social-icon facebook" target="_blank">
+                        <i class="fab fa-facebook-f"></i>
+                    </a>
+                    <a href="https://t.me/mg_Cyber_X" class="social-icon telegram" target="_blank">
+                        <i class="fab fa-telegram"></i>
+                    </a>
+                    <a href="https://www.instagram.com/mahmoud_eng_official/?__pwa=1" class="social-icon instagram" target="_blank">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                    <a href="https://www.youtube.com/@Mahmoud_Eng_Official" class="social-icon youtube" target="_blank">
+                        <i class="fab fa-youtube"></i>
+                    </a>
+                    <a href="https://www.linkedin.com/in/mahmoud-mohamed-aa5b76390" class="social-icon linkedin" target="_blank">
+                        <i class="fab fa-linkedin-in"></i>
+                    </a>
+                </div>
+            </div>
+            
+            <div class="hero-image" data-aos="fade-left" data-aos-delay="400">
+                <div class="profile-image-container">
+                    <div class="profile-badge">
+                        <i class="fas fa-star"></i>
+                        متخصص أمن سيبراني
+                    </div>
+                    <div class="profile-image-wrapper">
+                        <img src="@Mahmoud_Cyber.jpg" alt="محمود محمد" class="profile-image">
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+     
+        </div>
+    </section>
+    
+    <!-- About Section -->
+    <section id="about" class="section-container">
+        <div style="max-width: 1400px; margin: 0 auto; padding: 0 2rem;">
+            <h2 class="section-title" data-aos="fade-up">معلومات عني</h2>
+            
+            <div class="contact-container">
+                <div class="contact-info" data-aos="fade-right">
+                    <div class="contact-method">
+                        <div class="contact-icon">
+                            <i class="fas fa-map-marker-alt"></i>
+                        </div>
+                        <div class="contact-details">
+                            <h4>الموقع</h4>
+                            <p>الشرقية، مصر</p>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-method">
+                        <div class="contact-icon">
+                            <i class="fas fa-envelope"></i>
+                        </div>
+                        <div class="contact-details">
+                            <h4>البريد الإلكتروني</h4>
+                            <p>md.cyberx@gmail.com</p>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-method">
+                        <div class="contact-icon">
+                            <i class="fas fa-phone"></i>
+                        </div>
+                        <div class="contact-details">
+                            <h4>الهاتف</h4>
+                            <p>+201123961290</p>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-method">
+                        <div class="contact-icon">
+                            <i class="fas fa-globe"></i>
+                        </div>
+                        <div class="contact-details">
+                            <h4>الموقع الإلكتروني</h4>
+                            <p>mahmoud-cyberx.github.io</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="contact-form" data-aos="fade-left">
+                    <h3 style="color: white; font-size: 1.8rem; margin-bottom: 2rem; font-weight: 700;">
+                        <i class="fas fa-info-circle" style="color: #3b82f6; margin-left: 10px;"></i>
+                        نبذة عني
+                    </h3>
+                    
+                    <p style="color: #94a3b8; line-height: 1.8; margin-bottom: 1.5rem; font-size: 1.1rem;">
+                        أنا محمود محمد <span style="color: #3b82f6; font-weight: 700;">@Mahmoud_Cyber</span> مطور ويب ومتخصص أمن سيبراني شغوف بأكثر من 5 سنوات من الخبرة. 
+                        أتخصص في إنشاء تطبيقات ويب آمنة وعالية الأداء توفر تجارب مستخدم استثنائية.
+                    </p>
+                    
+                    <p style="color: #94a3b8; line-height: 1.8; margin-bottom: 2rem; font-size: 1.1rem;">
+                        بدأت رحلتي في التكنولوجيا عندما كنت في الـ15 من عمري، ومنذ ذلك الحين وأنا أتعلم باستمرار وأتكيف مع التقنيات الجديدة. 
+                        أؤمن بكتابة كود نظيف وفعال وتنفيذ إجراءات أمان قوية من البداية.
+                    </p>
+                    
+                    <div style="display: flex; gap: 1rem; flex-wrap: wrap;">
+                        <span style="padding: 0.7rem 1.2rem; background: rgba(59, 130, 246, 0.2); color: #3b82f6; border-radius: 12px; font-weight: 600;">
+                            <i class="fas fa-code"></i>
+                            تطوير الويب
+                        </span>
+                        <span style="padding: 0.7rem 1.2rem; background: rgba(16, 185, 129, 0.2); color: #10b981; border-radius: 12px; font-weight: 600;">
+                            <i class="fas fa-shield-alt"></i>
+                            الأمن السيبراني
+                        </span>
+                        <span style="padding: 0.7rem 1.2rem; background: rgba(245, 158, 11, 0.2); color: #f59e0b; border-radius: 12px; font-weight: 600;">
+                            <i class="fas fa-mobile-alt"></i>
+                            تطوير التطبيقات
+                        </span>
+                    </div>
+                    
+                    <a href="#" class="btn btn-primary" style="margin-top: 2rem; width: 100%;">
+                        <i class="fas fa-download"></i>
+                        تحميل السيرة الذاتية
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Skills Section -->
+    <section id="skills" class="section-container">
+        <div style="max-width: 1400px; margin: 0 auto; padding: 0 2rem;">
+            <h2 class="section-title" data-aos="fade-up">مهاراتي</h2>
+            
+            <div class="skills-grid">
+                <!-- Technical Skills -->
+                <div class="skill-category" data-aos="fade-right">
+                    <h3 class="skill-category-title">
+                        <i class="fas fa-laptop-code"></i>
+                        المهارات التقنية
+                    </h3>
+                    
+                    <div class="skill-item">
+                        <div class="skill-header">
+                            <div class="skill-name">HTML/CSS</div>
+                            <div class="skill-percentage">95%</div>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-progress" style="width: 95%;"></div>
+                        </div>
+                    </div>
+                    
+                    <div class="skill-item">
+                        <div class="skill-header">
+                            <div class="skill-name">JavaScript</div>
+                            <div class="skill-percentage">90%</div>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-progress" style="width: 90%;"></div>
+                        </div>
+                    </div>
+                    
+                    <div class="skill-item">
+                        <div class="skill-header">
+                            <div class="skill-name">React</div>
+                            <div class="skill-percentage">88%</div>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-progress" style="width: 88%;"></div>
+                        </div>
+                    </div>
+                    
+                    <div class="skill-item">
+                        <div class="skill-header">
+                            <div class="skill-name">Node.js</div>
+                            <div class="skill-percentage">85%</div>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-progress" style="width: 85%;"></div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Professional Skills -->
+                <div class="skill-category" data-aos="fade-left">
+                    <h3 class="skill-category-title">
+                        <i class="fas fa-user-shield"></i>
+                        المهارات المهنية
+                    </h3>
+                    
+                    <div class="skill-item">
+                        <div class="skill-header">
+                            <div class="skill-name">الأمن السيبراني</div>
+                            <div class="skill-percentage">92%</div>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-progress" style="width: 92%;"></div>
+                        </div>
+                    </div>
+                    
+                    <div class="skill-item">
+                        <div class="skill-header">
+                            <div class="skill-name">تصميم واجهة المستخدم</div>
+                            <div class="skill-percentage">80%</div>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-progress" style="width: 80%;"></div>
+                        </div>
+                    </div>
+                    
+                    <div class="skill-item">
+                        <div class="skill-header">
+                            <div class="skill-name">DevOps</div>
+                            <div class="skill-percentage">75%</div>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-progress" style="width: 75%;"></div>
+                        </div>
+                    </div>
+                    
+                    <div class="skill-item">
+                        <div class="skill-header">
+                            <div class="skill-name">إدارة المشاريع</div>
+                            <div class="skill-percentage">85%</div>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-progress" style="width: 85%;"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Projects Section -->
+    <section id="projects" class="section-container">
+        <div style="max-width: 1400px; margin: 0 auto; padding: 0 2rem;">
+            <h2 class="section-title" data-aos="fade-up">مشاريعي</h2>
+            
+            <div class="projects-grid">
+                <!-- Project 1 -->
+                <div class="project-card" data-aos="fade-up">
+                    <div class="project-image">
+                        <img src="cleaning.png" alt="ClearCut">
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-title">تطبيق إزالة الخلفية من الصور</h3>
+                        <p class="project-description">
+                            تطبيق مجاني 100% وسريع جداً لإزالة الخلفية من الصور. يتوافر كتطبيق وموقع ويب.
+                        </p>
+                        
+                        <div class="project-tags">
+                            <span class="project-tag">JavaScript</span>
+                            <span class="project-tag">Backend API</span>
+                            <span class="project-tag">ClearCut</span>
+                        </div>
+                        
+                        <div class="project-actions">
+                            <a href="https://devolepor.github.io/ClearCut" class="project-btn demo" target="_blank">
+                                <i class="fas fa-eye"></i>
+                                Demo
+                            </a>
+                            <a href="https://files.appsgeyser.com/ClearCut_19107755.apk" class="project-btn download" target="_blank">
+                                <i class="fas fa-download"></i>
+                                تحميل
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Project 2 -->
+                <div class="project-card" data-aos="fade-up" data-aos-delay="100">
+                    <div class="project-image">
+                        <img src="How To Host An Online Preschool Graduation — Daycare Studio.jpg" alt="نظام إدارة الطلاب">
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-title">نظام إدارة الطلاب</h3>
+                        <p class="project-description">
+                            تطبيق شامل لإدارة الطلاب مع ميزات مثل التسجيل والدفع عبر الإنترنت وإدارة الشهادات.
+                        </p>
+                        
+                        <div class="project-tags">
+                            <span class="project-tag">Front-end</span>
+                            <span class="project-tag">Back-end</span>
+                            <span class="project-tag">أمن 100%</span>
+                        </div>
+                        
+                        <div class="project-actions">
+                            <a href="https://devolepor.github.io/Student-manager/" class="project-btn demo" target="_blank">
+                                <i class="fas fa-eye"></i>
+                                Demo
+                            </a>
+                            <a href="tel:+201123961290" class="project-btn download">
+                                <i class="fas fa-phone"></i>
+                                طلب مخصص
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Project 3 -->
+                <div class="project-card" data-aos="fade-up" data-aos-delay="200">
+                    <div class="project-image">
+                        <img src="plo.jpg" alt="نظام إدارة الموظفين">
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-title">نظام إدارة الموظفين</h3>
+                        <p class="project-description">
+                            نظام متكامل لإدارة الموظفين مع تسجيل الحضور وإدارة الرواتب وتتبع حركة الموظفين عبر الإنترنت.
+                        </p>
+                        
+                        <div class="project-tags">
+                            <span class="project-tag">Python</span>
+                            <span class="project-tag">Django</span>
+                            <span class="project-tag">أمن 100%</span>
+                        </div>
+                        
+                        <div class="project-actions">
+                            <button onclick="openPasswordModal()" class="project-btn demo">
+                                <i class="fas fa-eye"></i>
+                                Demo
+                            </button>
+                            <a href="tel:+201123961290" class="project-btn download">
+                                <i class="fas fa-phone"></i>
+                                طلب مخصص
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Project 4 -->
+                <div class="project-card" data-aos="fade-up" data-aos-delay="300">
+                    <div class="project-image">
+                        <img src="photo/gym.jpg" alt="نظام إدارة الجيم">
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-title">نظام إدارة الجيم</h3>
+                        <p class="project-description">
+                            لوحة تحكم كاملة لإدارة مشتركي الجيم وتحليل البيانات وإدارة المدفوعات والمتابعة.
+                        </p>
+                        
+                        <div class="project-tags">
+                            <span class="project-tag">HTML</span>
+                            <span class="project-tag">JavaScript</span>
+                            <span class="project-tag">Tailwind CSS</span>
+                        </div>
+                        
+                        <div class="project-actions">
+                            <a href="https://devolepor.github.io/gym_systeam/" class="project-btn demo" target="_blank">
+                                <i class="fas fa-eye"></i>
+                                Demo
+                            </a>
+                            <a href="tel:+201123961290" class="project-btn download">
+                                <i class="fas fa-phone"></i>
+                                طلب مخصص
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+
+        <!-- Blog Section -->
+        <section class="py-16 md:py-20 section-dark">
+            <div class="container mx-auto px-6">
+                <h2 class="text-2xl md:text-3xl font-bold text-center mb-12 md:mb-16 text-white section-title" data-aos="fade-up">آخر المقالات</h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
+                    <!-- Blog 1 -->
+                    <div class="project-card card rounded-lg overflow-hidden" data-aos="fade-up">
+                        <div class="h-40 md:h-48 overflow-hidden">
+                            <img src="photo/pet.jpg" alt="أدوات التشفير والامن السيبراني (محمود محمد مطور تطبيقات )" class="w-full h-full object-cover project-image">
+                        </div>
+                        <div class="p-4 md:p-6">
+                            <span class="text-sm text-accent-blue">الأمن السيبراني</span>
+                            <h3 class="text-lg md:text-xl font-semibold text-white mt-2">  التشفير بلغة Python </h3>
+                            <p class="text-gray-300 mt-2 text-sm md:text-base">تعرف على كيفية استخدام لغة Python في تطبيقات التشفير والأمن السيبراني. <span style="color:#ef4444;">متوفر أداه كامله للتشفير بكل لغات البرمجه وبكل انواع التشفير لطلب الاداه أو الاستفسار يرجي التواصل علي <a style="color: #3b82f6;" href="tel:+201123961290">اضغط للاتصال</a></span></p>
+                            <div class="mt-4 flex items-center justify-between">
+                                <span class="text-sm text-gray-400 text-xs md:text-sm">الان</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Blog 2 -->
+                    <div class="project-card card rounded-lg overflow-hidden" data-aos="fade-up" data-aos-delay="100">
+                        <div class="h-40 md:h-48 overflow-hidden">
+                            <img src="photo/hack.jpg" alt="React Performance Article" class="w-full h-full object-cover project-image">
+                        </div>
+                        <div class="p-4 md:p-6">
+                            <span class="text-sm text-accent-blue"> الاختراق</span>
+                            <h3 class="text-lg md:text-xl font-semibold text-white mt-2">يتوفر جمع الكورسات الللازمه</h3>
+                            <p class="text-gray-300 mt-2 text-sm md:text-base"> للخروج ك هاكر اخلاقي (الدوره بالكامل لغرض التعليم والتوعيه)</p>
+                            <div class="mt-4 flex items-center justify-between">
+                                <span class="text-sm text-gray-400 text-xs md:text-sm">الان</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Blog 3 -->
+                    <div class="project-card card rounded-lg overflow-hidden" data-aos="fade-up" data-aos-delay="200">
+                        <div class="h-40 md:h-48 overflow-hidden">
+                            <img src="photo/tools.jpg" alt="Career Tips Article" class="w-full h-full object-cover project-image">
+                        </div>
+                        <div class="p-4 md:p-6">
+                            <span class="text-sm text-accent-blue"> أداة ال Halck</span>
+                            <h3 class="text-lg md:text-xl font-semibold text-white mt-2">  تتوافر اخر اصدار v3 </h3>
+                            <p class="text-gray-300 mt-2 text-sm md:text-base">  الاداه تنشي جميع البايلود اللتي تمكنك من تنفيذ هجمات اختراق متعددة بسهولة وفعالية.</p>
+                            <div class="mt-4 flex items-center justify-between">
+                                <span class="text-sm text-gray-400 text-xs md:text-sm">الان</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="section-container">
+        <div style="max-width: 1400px; margin: 0 auto; padding: 0 2rem;">
+            <h2 class="section-title" data-aos="fade-up">اتصل بي</h2>
+            
+            <div class="contact-container">
+                <div class="contact-info" data-aos="fade-right">
+                    <h3 style="color: white; font-size: 1.8rem; margin-bottom: 2rem; font-weight: 700;">
+                        <i class="fas fa-headset" style="color: #3b82f6; margin-left: 10px;"></i>
+                        معلومات التواصل
+                    </h3>
+                    
+                    <p style="color: #94a3b8; line-height: 1.8; margin-bottom: 2rem; font-size: 1.1rem;">
+                        لا تتردد في التواصل معي لأي أسئلة أو فرص. أنا دائمًا منفتح لمناقشة المشاريع والأفكار الجديدة.
+                    </p>
+                    
+                    <div class="contact-method" onclick="window.location.href='tel:+201123961290'">
+                        <div class="contact-icon">
+                            <i class="fas fa-phone"></i>
+                        </div>
+                        <div class="contact-details">
+                            <h4>الهاتف</h4>
+                            <p>+201123961290</p>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-method" onclick="window.location.href='mailto:md.cyberx@gmail.com'">
+                        <div class="contact-icon">
+                            <i class="fas fa-envelope"></i>
+                        </div>
+                        <div class="contact-details">
+                            <h4>البريد الإلكتروني</h4>
+                            <p>md.cyberx@gmail.com</p>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-method" onclick="window.open('https://www.google.com/maps/place/Mahmoud+Mohamed', '_blank')">
+                        <div class="contact-icon">
+                            <i class="fas fa-map-marker-alt"></i>
+                        </div>
+                        <div class="contact-details">
+                            <h4>الموقع</h4>
+                            <p>الشرقية، مصر</p>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-method" onclick="window.open('https://t.me/mg_Cyber_X', '_blank')">
+                        <div class="contact-icon">
+                            <i class="fab fa-telegram"></i>
+                        </div>
+                        <div class="contact-details">
+                            <h4>Telegram</h4>
+                            <p>@mg_Cyber_X</p>
+                        </div>
+                    </div>
+                    
+                    <div style="margin-top: 2rem;">
+                        <h4 style="color: white; font-size: 1.2rem; margin-bottom: 1rem; font-weight: 600;">
+                            <i class="fas fa-share-alt" style="margin-left: 8px;"></i>
+                            تابعني
+                        </h4>
+                        <div style="display: flex; gap: 0.8rem;">
+                            <a href="https://www.facebook.com/profile.php?id=61582680613004" class="social-icon facebook" target="_blank">
+                                <i class="fab fa-facebook-f"></i>
+                            </a>
+                            <a href="https://t.me/mg_Cyber_X" class="social-icon telegram" target="_blank">
+                                <i class="fab fa-telegram"></i>
+                            </a>
+                            <a href="https://www.instagram.com/mahmoud_eng_official/?__pwa=1" class="social-icon instagram" target="_blank">
+                                <i class="fab fa-instagram"></i>
+                            </a>
+                            <a href="https://www.youtube.com/@Mahmoud_Eng_Official" class="social-icon youtube" target="_blank">
+                                <i class="fab fa-youtube"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="contact-form" data-aos="fade-left">
+                    <h3 style="color: white; font-size: 1.8rem; margin-bottom: 2rem; font-weight: 700;">
+                        <i class="fas fa-paper-plane" style="color: #3b82f6; margin-left: 10px;"></i>
+                        أرسل لي رسالة
+                    </h3>
+                    
+                    <form id="contactForm">
+                        <div class="form-group">
+                            <label class="form-label">الاسم الكامل</label>
+                            <input type="text" class="form-input" placeholder="أدخل اسمك الكامل" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label class="form-label">البريد الإلكتروني</label>
+                            <input type="email" class="form-input" placeholder="أدخل بريدك الإلكتروني" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label class="form-label">رقم الهاتف</label>
+                            <input type="tel" class="form-input" placeholder="أدخل رقم هاتفك">
+                        </div>
+                        
+                        <div class="form-group">
+                            <label class="form-label">الرسالة</label>
+                            <textarea class="form-input form-textarea" placeholder="اكتب رسالتك هنا..." required></textarea>
+                        </div>
+                        
+                        <button type="submit" class="btn btn-primary" style="width: 100%;">
+                            <i class="fas fa-paper-plane"></i>
+                            إرسال الرسالة
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Footer -->
+    <footer style="background: #0f172a; padding: 3rem 2rem; border-top: 1px solid rgba(255, 255, 255, 0.1);">
+        <div style="max-width: 1400px; margin: 0 auto;">
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 2rem;">
+                <div>
+                    <div style="display: flex; align-items: center; gap: 1rem; margin-bottom: 1rem;">
+                        <div class="logo-icon">
+                            <i class="fas fa-code"></i>
+                        </div>
+                        <div>
+                            <div style="font-size: 1.5rem; font-weight: 800; color: white;">Cyber X</div>
+                            <div style="color: #94a3b8; font-size: 0.9rem;">مطور ويب ومتخصص أمن سيبراني</div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div style="display: flex; gap: 1rem;">
+                    <a href="https://www.facebook.com/profile.php?id=61582680613004" class="social-icon facebook" target="_blank">
+                        <i class="fab fa-facebook-f"></i>
+                    </a>
+                    <a href="https://t.me/mg_Cyber_X" class="social-icon telegram" target="_blank">
+                        <i class="fab fa-telegram"></i>
+                    </a>
+                    <a href="https://www.instagram.com/mahmoud_eng_official/?__pwa=1" class="social-icon instagram" target="_blank">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                    <a href="https://www.linkedin.com/in/mahmoud-mohamed-aa5b76390" class="social-icon linkedin" target="_blank">
+                        <i class="fab fa-linkedin-in"></i>
+                    </a>
+                </div>
+            </div>
+            
+            <div style="border-top: 1px solid rgba(255, 255, 255, 0.1); padding-top: 2rem; text-align: center;">
+                <p style="color: #94a3b8; margin-bottom: 1rem;">
+                    &copy; 2025 محمود محمد. جميع الحقوق محفوظة.
+                </p>
+                <p style="color: #94a3b8; font-size: 0.9rem;">
+                    عدد الزوار: <span id="visitor-count" style="color: #3b82f6; font-weight: 700;">0</span>
+                </p>
+            </div>
+        </div>
+    </footer>
+    
+    <!-- Floating Buttons -->
+    <div class="floating-buttons">
+        <a href="https://wa.me/201123961290" class="floating-btn whatsapp" target="_blank">
+            <i class="fab fa-whatsapp"></i>
+        </a>
+        <a href="tel:+201123961290" class="floating-btn phone">
+            <i class="fas fa-phone"></i>
+        </a>
+        <div class="floating-btn up" onclick="scrollToTop()">
+            <i class="fas fa-arrow-up"></i>
+        </div>
+    </div>
+    
+    <!-- Toast Notification -->
+    <div class="toast">
+        <i class="fas fa-check-circle"></i>
+        <span id="toast-message">تم الإرسال بنجاح!</span>
+    </div>
+    
+    <!-- Password Modal -->
+    <div id="passwordModal" style="display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0, 0, 0, 0.8); z-index: 2000; align-items: center; justify-content: center;">
+        <div style="background: #1e293b; border-radius: 20px; padding: 2.5rem; width: 90%; max-width: 500px; border: 1px solid rgba(255, 255, 255, 0.1); box-shadow: 0 20px 60px rgba(0, 0, 0, 0.4);">
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 2rem;">
+                <h3 style="color: white; font-size: 1.5rem; font-weight: 700;">
+                    <i class="fas fa-lock" style="color: #3b82f6; margin-left: 10px;"></i>
+                    التحقق من الهوية
+                </h3>
+                <button onclick="closePasswordModal()" style="background: none; border: none; color: #94a3b8; font-size: 1.5rem; cursor: pointer;">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            
+            <div style="margin-bottom: 1.5rem;">
+                <label style="display: block; color: white; margin-bottom: 0.8rem; font-weight: 600;">أدخل كلمة المرور:</label>
+                <input type="password" id="passwordInput" style="width: 100%; padding: 1rem; border-radius: 12px; border: 2px solid rgba(255, 255, 255, 0.1); background: rgba(255, 255, 255, 0.05); color: white; font-size: 1rem;" placeholder="أدخل كلمة المرور هنا">
+            </div>
+            
+            <div id="passwordMessage" style="display: none; padding: 1rem; border-radius: 12px; margin-bottom: 1.5rem;"></div>
+            
+            <button onclick="checkPassword()" class="btn btn-primary" style="width: 100%; margin-bottom: 1.5rem;">
+                <i class="fas fa-check"></i>
+                تحقق وتنزيل
+            </button>
+            
+            <div style="border-top: 1px solid rgba(255, 255, 255, 0.1); padding-top: 1.5rem;">
+                <h4 style="color: white; font-size: 1.1rem; margin-bottom: 1rem; font-weight: 600; text-align: center;">تواصل مع المطور</h4>
+                <div style="display: flex; gap: 1rem;">
+                    <a href="https://wa.me/201123961290" class="btn" style="flex: 1; background: #25d366; color: white; text-align: center; padding: 1rem;" target="_blank">
+                        <i class="fab fa-whatsapp"></i>
+                        واتساب
+                    </a>
+                    <a href="tel:+201123961290" class="btn" style="flex: 1; background: #3b82f6; color: white; text-align: center; padding: 1rem;">
+                        <i class="fas fa-phone"></i>
+                        اتصال
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Scripts -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        // Initialize AOS
+        AOS.init({
+            duration: 800,
+            easing: 'ease-in-out',
+            once: true,
+            offset: 100
+        });
+        
+        // Theme Toggle
+        const themeToggle = document.getElementById('themeToggle');
+        const mobileThemeToggle = document.getElementById('mobileThemeToggle');
+        const body = document.body;
+        
+        function toggleTheme() {
+            body.classList.toggle('dark-mode');
+            body.classList.toggle('light-mode');
+            
+            const icon = themeToggle.querySelector('i');
+            if (body.classList.contains('light-mode')) {
+                icon.classList.remove('fa-moon');
+                icon.classList.add('fa-sun');
+                localStorage.setItem('theme', 'light');
+            } else {
+                icon.classList.remove('fa-sun');
+                icon.classList.add('fa-moon');
+                localStorage.setItem('theme', 'dark');
+            }
+        }
+        
+        themeToggle.addEventListener('click', toggleTheme);
+        if (mobileThemeToggle) {
+            mobileThemeToggle.addEventListener('click', toggleTheme);
+        }
+        
+        // Load saved theme
+        const savedTheme = localStorage.getItem('theme');
+        if (savedTheme === 'light') {
+            body.classList.add('light-mode');
+            body.classList.remove('dark-mode');
+            const icon = themeToggle.querySelector('i');
+            icon.classList.remove('fa-moon');
+            icon.classList.add('fa-sun');
+        }
+        
+        // Mobile Menu
+        const mobileMenuButton = document.querySelector('.mobile-menu-button');
+        const mobileMenu = document.querySelector('.mobile-menu');
+        
+        mobileMenuButton.addEventListener('click', () => {
+            mobileMenu.classList.toggle('open');
+            mobileMenuButton.classList.toggle('active');
+        });
+        
+        // Close mobile menu when clicking on links
+        const mobileLinks = document.querySelectorAll('.mobile-menu-link');
+        mobileLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.remove('open');
+                mobileMenuButton.classList.remove('active');
+            });
+        });
+        
+        // Enhanced Search Functionality
+        const searchBox = document.querySelector('.search-box');
+        const searchClear = document.querySelector('.search-clear');
+        const searchResults = document.querySelector('.search-results');
+        const searchResultsBody = document.querySelector('.search-results-body');
+        const searchResultsCount = document.querySelector('.search-results-count');
+        
+        // Search data
+        const searchData = [
+            {
+                title: "محمود محمد - Mahmoud_Cyber",
+                description: "مطور ويب وأمن سيبراني محترف من مصر",
+                icon: "fas fa-user",
+                link: "#about",
+                category: "معلومات",
+                keywords: ["محمود", "محمد", "مطور", "ويب", "أمن", "سيبراني", "cyber", "mahmoud"]
+            },
+            {
+                title: "مشاريع تطوير الويب",
+                description: "عرض مشاريع تطوير الويب والتطبيقات",
+                icon: "fas fa-laptop-code",
+                link: "#projects",
+                category: "مشاريع",
+                keywords: ["مشاريع", "تطوير", "ويب", "تطبيقات", "برمجة", "كود"]
+            },
+            {
+                title: "خدمات الأمن السيبراني",
+                description: "حماية المواقع والتطبيقات من الاختراقات",
+                icon: "fas fa-shield-alt",
+                link: "#skills",
+                category: "خدمات",
+                keywords: ["أمن", "سيبراني", "حماية", "اختراق", "أمان", "cybersecurity"]
+            },
+            {
+                title: "مهارات تقنية",
+                description: "HTML, CSS, JavaScript, React, Node.js وأكثر",
+                icon: "fas fa-code",
+                link: "#skills",
+                category: "مهارات",
+                keywords: ["مهارات", "تقنية", "html", "css", "javascript", "react", "node"]
+            },
+            {
+                title: "اتصل بي",
+                description: "طرق التواصل والاستفسار عن الخدمات",
+                icon: "fas fa-envelope",
+                link: "#contact",
+                category: "اتصال",
+                keywords: ["اتصل", "تواصل", "استفسار", "خدمات", "رسالة", "هاتف"]
+            },
+            {
+                title: "تطبيق إزالة الخلفية",
+                description: "تطبيق ClearCut لإزالة خلفية الصور مجاناً",
+                icon: "fas fa-image",
+                link: "#projects",
+                category: "مشاريع",
+                keywords: ["تطبيق", "إزالة", "خلفية", "صور", "clearcut", "صورة"]
+            },
+            {
+                title: "نظام إدارة الطلاب",
+                description: "نظام متكامل لإدارة الطلاب والشهادات",
+                icon: "fas fa-graduation-cap",
+                link: "#projects",
+                category: "مشاريع",
+                keywords: ["نظام", "إدارة", "طلاب", "شهادات", "تعليم", "مدرسة"]
+            },
+            {
+                title: "نظام إدارة الموظفين",
+                description: "نظام كامل لإدارة الموظفين والرواتب",
+                icon: "fas fa-users",
+                link: "#projects",
+                category: "مشاريع",
+                keywords: ["نظام", "إدارة", "موظفين", "رواتب", "حضور", "انصراف"]
+            },
+            {
+                title: "نظام إدارة الجيم",
+                description: "لوحة تحكم لإدارة مشتركي الجيم",
+                icon: "fas fa-dumbbell",
+                link: "#projects",
+                category: "مشاريع",
+                keywords: ["نظام", "إدارة", "جيم", "رياضة", "تمارين", "مشتركين"]
+            }
+        ];
+        
+        // Search functionality
+        searchBox.addEventListener('input', function() {
+            const query = this.value.toLowerCase().trim();
+            
+            if (query.length > 0) {
+                searchClear.classList.add('show');
+            } else {
+                searchClear.classList.remove('show');
+            }
+            
+            if (query.length < 2) {
+                searchResults.style.display = 'none';
+                return;
+            }
+            
+            // Filter results
+            const results = searchData.filter(item => {
+                return item.keywords.some(keyword => keyword.includes(query)) ||
+                       item.title.toLowerCase().includes(query) ||
+                       item.description.toLowerCase().includes(query);
+            });
+            
+            // Display results
+            displaySearchResults(results);
+        });
+        
+        // Clear search
+        searchClear.addEventListener('click', function() {
+            searchBox.value = '';
+            searchResults.style.display = 'none';
+            this.classList.remove('show');
+            searchBox.focus();
+        });
+        
+        // Display search results
+        function displaySearchResults(results) {
+            searchResultsBody.innerHTML = '';
+            
+            if (results.length === 0) {
+                searchResultsBody.innerHTML = `
+                    <div class="search-no-results">
+                        <i class="fas fa-search"></i>
+                        <p>لا توجد نتائج للبحث</p>
+                    </div>
+                `;
+                searchResultsCount.textContent = "0 نتيجة";
+            } else {
+                results.forEach(result => {
+                    const resultItem = document.createElement('div');
+                    resultItem.className = 'search-result-item';
+                    resultItem.innerHTML = `
+                        <div class="search-result-icon">
+                            <i class="${result.icon}"></i>
+                        </div>
+                        <div class="search-result-content">
+                            <div class="search-result-title">${result.title}</div>
+                            <div class="search-result-description">${result.description}</div>
+                        </div>
+                        <div class="search-result-arrow">
+                            <i class="fas fa-chevron-left"></i>
+                        </div>
+                    `;
+                    
+                    resultItem.addEventListener('click', () => {
+                        window.location.href = result.link;
+                        searchResults.style.display = 'none';
+                        searchBox.value = '';
+                        searchClear.classList.remove('show');
+                    });
+                    
+                    searchResultsBody.appendChild(resultItem);
+                });
+                
+                searchResultsCount.textContent = `${results.length} نتيجة`;
+            }
+            
+            searchResults.style.display = 'block';
+        }
+        
+        // Close search results when clicking outside
+        document.addEventListener('click', function(event) {
+            if (!searchBox.contains(event.target) && !searchResults.contains(event.target)) {
+                searchResults.style.display = 'none';
+            }
+        });
+        
+        // Contact form
+        const contactForm = document.getElementById('contactForm');
+        const toast = document.querySelector('.toast');
+        const toastMessage = document.getElementById('toast-message');
+        
+        contactForm.addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            // Get form data
+            const name = this.querySelector('input[type="text"]').value;
+            const email = this.querySelector('input[type="email"]').value;
+            const phone = this.querySelector('input[type="tel"]').value;
+            const message = this.querySelector('textarea').value;
+            
+            // Create WhatsApp message
+            const whatsappMessage = `مرحباً، أنا ${name}%0Aالبريد الإلكتروني: ${email}%0Aالهاتف: ${phone}%0Aالرسالة: ${message}`;
+            const whatsappURL = `https://wa.me/201123961290?text=${whatsappMessage}`;
+            
+            // Show success message
+            toastMessage.textContent = 'سيتم توجيهك إلى واتساب لإرسال رسالتك!';
+            toast.classList.remove('error', 'warning');
+            toast.classList.add('show');
+            
+            // Open WhatsApp after delay
+            setTimeout(() => {
+                window.open(whatsappURL, '_blank');
+            }, 1500);
+            
+            // Reset form
+            this.reset();
+            
+            // Hide toast after 5 seconds
+            setTimeout(() => {
+                toast.classList.remove('show');
+            }, 5000);
+        });
+        
+        // Statistics counter
+        const statNumbers = document.querySelectorAll('.stat-number');
+        
+        function animateCounter(element, target) {
+            let current = 0;
+            const increment = target / 100;
+            const timer = setInterval(() => {
+                current += increment;
+                if (current >= target) {
+                    element.textContent = target;
+                    clearInterval(timer);
+                } else {
+                    element.textContent = Math.floor(current);
+                }
+            }, 20);
+        }
+        
+        // Start counter when in view
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    const target = parseInt(entry.target.getAttribute('data-count'));
+                    animateCounter(entry.target, target);
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.5 });
+        
+        statNumbers.forEach(stat => {
+            observer.observe(stat);
+        });
+        
+        // Visitor counter
+        function updateVisitorCount() {
+            let count = localStorage.getItem('visitorCount');
+            if (!count) {
+                count = 0;
+            } else {
+                count = parseInt(count);
+            }
+            count += 1;
+            localStorage.setItem('visitorCount', count);
+            document.getElementById('visitor-count').textContent = count;
+        }
+        
+        updateVisitorCount();
+        
+        // Scroll to top
+        function scrollToTop() {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        }
+        
+        // Password modal
+        function openPasswordModal() {
+            document.getElementById('passwordModal').style.display = 'flex';
+            document.getElementById('passwordInput').focus();
+        }
+        
+        function closePasswordModal() {
+            document.getElementById('passwordModal').style.display = 'none';
+            document.getElementById('passwordInput').value = '';
+            document.getElementById('passwordMessage').style.display = 'none';
+        }
+        
+        function checkPassword() {
+            const password = document.getElementById('passwordInput').value;
+            const message = document.getElementById('passwordMessage');
+            
+            if (password === 'admin123') {
+                message.innerHTML = '<div style="color: #10b981; background: rgba(16, 185, 129, 0.1); padding: 1rem; border-radius: 12px;"><i class="fas fa-check"></i> كلمة المرور صحيحة! جاري تنزيل الملف...</div>';
+                message.style.display = 'block';
+                
+                setTimeout(() => {
+                    window.location.href = 'https://github.com/Devolepor/developortc/raw/refs/heads/main/company.rar';
+                    closePasswordModal();
+                }, 1500);
+            } else {
+                message.innerHTML = '<div style="color: #ef4444; background: rgba(239, 68, 68, 0.1); padding: 1rem; border-radius: 12px;"><i class="fas fa-times"></i> كلمة المرور غير صحيحة! حاول مرة أخرى.</div>';
+                message.style.display = 'block';
+            }
+        }
+        
+        // Close modal when clicking outside
+        document.getElementById('passwordModal').addEventListener('click', function(e) {
+            if (e.target === this) {
+                closePasswordModal();
+            }
+        });
+        
+        // Allow Enter key for password
+        document.getElementById('passwordInput').addEventListener('keypress', function(e) {
+            if (e.key === 'Enter') {
+                checkPassword();
+            }
+        });
+        
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                
+                const targetId = this.getAttribute('href');
+                if (targetId === '#') return;
+                
+                const targetElement = document.querySelector(targetId);
+                if (targetElement) {
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 80,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+        
+        // Add loading animation to buttons
+        document.querySelectorAll('.btn').forEach(button => {
+            button.addEventListener('click', function(e) {
+                if (this.getAttribute('href') === '#') {
+                    e.preventDefault();
+                }
+                
+                // Add ripple effect
+                const ripple = document.createElement('span');
+                const rect = this.getBoundingClientRect();
+                const size = Math.max(rect.width, rect.height);
+                const x = e.clientX - rect.left - size / 2;
+                const y = e.clientY - rect.top - size / 2;
+                
+                ripple.style.cssText = `
+                    position: absolute;
+                    border-radius: 50%;
+                    background: rgba(255, 255, 255, 0.7);
+                    transform: scale(0);
+                    animation: ripple 0.6s linear;
+                    width: ${size}px;
+                    height: ${size}px;
+                    top: ${y}px;
+                    left: ${x}px;
+                `;
+                
+                this.appendChild(ripple);
+                
+                setTimeout(() => {
+                    ripple.remove();
+                }, 600);
+            });
+        });
+        
+        // Add CSS for ripple effect
+        const style = document.createElement('style');
+        style.textContent = `
+            @keyframes ripple {
+                to {
+                    transform: scale(4);
+                    opacity: 0;
+                }
+            }
+            
+            .btn {
+                position: relative;
+                overflow: hidden;
+            }
+        `;
+        document.head.appendChild(style);
+        
+        // Initialize tooltips for social icons
+        document.querySelectorAll('.social-icon').forEach(icon => {
+            icon.addEventListener('mouseenter', function() {
+                const platform = this.classList[1];
+                let tooltipText = '';
+                
+                switch(platform) {
+                    case 'facebook':
+                        tooltipText = 'Facebook';
+                        break;
+                    case 'telegram':
+                        tooltipText = 'Telegram';
+                        break;
+                    case 'instagram':
+                        tooltipText = 'Instagram';
+                        break;
+                    case 'youtube':
+                        tooltipText = 'YouTube';
+                        break;
+                    case 'linkedin':
+                        tooltipText = 'LinkedIn';
+                        break;
+                    case 'whatsapp':
+                        tooltipText = 'WhatsApp';
+                        break;
+                    default:
+                        tooltipText = 'Social Media';
+                }
+                
+                // Create tooltip
+                const tooltip = document.createElement('div');
+                tooltip.className = 'social-tooltip';
+                tooltip.textContent = tooltipText;
+                tooltip.style.cssText = `
+                    position: absolute;
+                    background: rgba(0, 0, 0, 0.8);
+                    color: white;
+                    padding: 5px 10px;
+                    border-radius: 6px;
+                    font-size: 12px;
+                    white-space: nowrap;
+                    z-index: 1000;
+                    pointer-events: none;
+                    transform: translateY(-100%) translateX(-50%);
+                    left: 50%;
+                    top: -10px;
+                    opacity: 0;
+                    transition: opacity 0.3s;
+                `;
+                
+                this.appendChild(tooltip);
+                
+                setTimeout(() => {
+                    tooltip.style.opacity = '1';
+                }, 10);
+            });
+            
+            icon.addEventListener('mouseleave', function() {
+                const tooltip = this.querySelector('.social-tooltip');
+                if (tooltip) {
+                    tooltip.remove();
+                }
+            });
+        });
+    </script>
+</body>
+</html>
