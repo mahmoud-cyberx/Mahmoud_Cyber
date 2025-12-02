@@ -965,12 +965,19 @@
             color: #64748b;
         }
         
-        /* Skills Section */
+        /* Skills Section - محسّن */
         .skills-grid {
             display: grid;
             grid-template-columns: 1fr 1fr;
             gap: 4rem;
             margin-top: 3rem;
+        }
+        
+        @media (max-width: 1024px) {
+            .skills-grid {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
         }
         
         .skill-category {
@@ -979,6 +986,18 @@
             padding: 2.5rem;
             border: 1px solid rgba(255, 255, 255, 0.1);
             box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .skill-category::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 6px;
+            height: 100%;
+            background: var(--gradient-accent);
         }
         
         .light-mode .skill-category {
@@ -988,8 +1007,8 @@
         }
         
         .skill-category-title {
-            font-size: 1.5rem;
-            font-weight: 700;
+            font-size: 1.6rem;
+            font-weight: 800;
             color: white;
             margin-bottom: 2rem;
             display: flex;
@@ -1003,7 +1022,7 @@
         
         .skill-category-title i {
             color: #3b82f6;
-            font-size: 1.8rem;
+            font-size: 2rem;
         }
         
         .skill-item {
@@ -1014,12 +1033,20 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
-            margin-bottom: 0.8rem;
+            margin-bottom: 1rem;
         }
         
         .skill-name {
-            font-weight: 600;
+            font-weight: 700;
             color: white;
+            font-size: 1.2rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        
+        .skill-name i {
+            color: #3b82f6;
             font-size: 1.1rem;
         }
         
@@ -1029,8 +1056,8 @@
         
         .skill-percentage {
             color: #3b82f6;
-            font-weight: 700;
-            font-size: 1.1rem;
+            font-weight: 800;
+            font-size: 1.3rem;
         }
         
         .skill-bar {
@@ -1038,6 +1065,7 @@
             background: rgba(255, 255, 255, 0.1);
             border-radius: 10px;
             overflow: hidden;
+            position: relative;
         }
         
         .light-mode .skill-bar {
@@ -1049,14 +1077,226 @@
             border-radius: 10px;
             background: var(--gradient-accent);
             transition: width 1.5s ease-out;
+            position: relative;
+            overflow: hidden;
         }
         
-        /* Projects Section */
+        .skill-progress::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+            animation: shimmer 2s infinite;
+        }
+        
+        /* Cybersecurity Section - جديد */
+        #cybersecurity {
+            background: var(--gradient-cyber);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        #cybersecurity::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: 
+                radial-gradient(circle at 10% 10%, rgba(220, 38, 38, 0.05) 0%, transparent 50%),
+                radial-gradient(circle at 90% 90%, rgba(37, 99, 235, 0.05) 0%, transparent 50%);
+        }
+        
+        .cyber-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
+            margin-top: 3rem;
+        }
+        
+        @media (max-width: 1024px) {
+            .cyber-grid {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+        }
+        
+        .cyber-team {
+            background: var(--gradient-card);
+            border-radius: 25px;
+            padding: 2.5rem;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2);
+            position: relative;
+            overflow: hidden;
+            transition: all 0.3s ease;
+        }
+        
+        .cyber-team:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 50px rgba(0, 0, 0, 0.3);
+        }
+        
+        .cyber-team.red-team {
+            border-top: 5px solid #dc2626;
+        }
+        
+        .cyber-team.blue-team {
+            border-top: 5px solid #2563eb;
+        }
+        
+        .cyber-team-header {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            margin-bottom: 2rem;
+            padding-bottom: 1.5rem;
+            border-bottom: 2px solid rgba(255, 255, 255, 0.1);
+        }
+        
+        .cyber-team-icon {
+            width: 70px;
+            height: 70px;
+            border-radius: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2rem;
+            color: white;
+        }
+        
+        .red-team .cyber-team-icon {
+            background: var(--gradient-red-team);
+        }
+        
+        .blue-team .cyber-team-icon {
+            background: var(--gradient-blue-team);
+        }
+        
+        .cyber-team-title {
+            font-size: 2rem;
+            font-weight: 900;
+            color: white;
+        }
+        
+        .cyber-team-description {
+            color: #94a3b8;
+            font-size: 1.1rem;
+            line-height: 1.7;
+            margin-bottom: 2rem;
+        }
+        
+        .light-mode .cyber-team-description {
+            color: #64748b;
+        }
+        
+        .tools-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 1rem;
+            margin-top: 1.5rem;
+        }
+        
+        @media (max-width: 768px) {
+            .tools-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+        
+        .tool-card {
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 15px;
+            padding: 1.5rem;
+            transition: all 0.3s ease;
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            display: flex;
+            flex-direction: column;
+            gap: 0.8rem;
+        }
+        
+        .red-team .tool-card:hover {
+            background: rgba(220, 38, 38, 0.1);
+            border-color: rgba(220, 38, 38, 0.3);
+            transform: translateX(-5px);
+        }
+        
+        .blue-team .tool-card:hover {
+            background: rgba(37, 99, 235, 0.1);
+            border-color: rgba(37, 99, 235, 0.3);
+            transform: translateX(-5px);
+        }
+        
+        .tool-header {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+        
+        .tool-icon {
+            width: 50px;
+            height: 50px;
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            color: white;
+        }
+        
+        .red-team .tool-icon {
+            background: rgba(220, 38, 38, 0.2);
+            color: #f87171;
+        }
+        
+        .blue-team .tool-icon {
+            background: rgba(37, 99, 235, 0.2);
+            color: #60a5fa;
+        }
+        
+        .tool-title {
+            font-size: 1.2rem;
+            font-weight: 700;
+            color: white;
+            flex: 1;
+        }
+        
+        .light-mode .tool-title {
+            color: #1e293b;
+        }
+        
+        .tool-description {
+            color: #94a3b8;
+            font-size: 0.95rem;
+            line-height: 1.5;
+        }
+        
+        .light-mode .tool-description {
+            color: #64748b;
+        }
+        
+        /* Projects Section - محسّن */
         .projects-grid {
             display: grid;
             grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
-            gap: 2rem;
+            gap: 2.5rem;
             margin-top: 3rem;
+        }
+        
+        @media (max-width: 768px) {
+            .projects-grid {
+                grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+                gap: 2rem;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .projects-grid {
+                grid-template-columns: 1fr;
+            }
         }
         
         .project-card {
@@ -1066,6 +1306,9 @@
             transition: all 0.4s ease;
             border: 1px solid rgba(255, 255, 255, 0.1);
             box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2);
+            height: 100%;
+            display: flex;
+            flex-direction: column;
         }
         
         .light-mode .project-card {
@@ -1082,6 +1325,17 @@
         .project-image {
             height: 220px;
             overflow: hidden;
+            position: relative;
+        }
+        
+        .project-image::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(to bottom, transparent 0%, rgba(0, 0, 0, 0.1) 100%);
         }
         
         .project-image img {
@@ -1097,13 +1351,17 @@
         
         .project-content {
             padding: 2rem;
+            flex: 1;
+            display: flex;
+            flex-direction: column;
         }
         
         .project-title {
-            font-size: 1.4rem;
-            font-weight: 700;
+            font-size: 1.5rem;
+            font-weight: 800;
             color: white;
             margin-bottom: 1rem;
+            line-height: 1.4;
         }
         
         .light-mode .project-title {
@@ -1114,6 +1372,7 @@
             color: #94a3b8;
             line-height: 1.6;
             margin-bottom: 1.5rem;
+            flex: 1;
         }
         
         .light-mode .project-description {
@@ -1139,6 +1398,13 @@
         .project-actions {
             display: flex;
             gap: 1rem;
+            margin-top: auto;
+        }
+        
+        @media (max-width: 480px) {
+            .project-actions {
+                flex-direction: column;
+            }
         }
         
         .project-btn {
@@ -1153,6 +1419,7 @@
             align-items: center;
             justify-content: center;
             gap: 0.5rem;
+            text-decoration: none;
         }
         
         .project-btn.demo {
@@ -1182,12 +1449,19 @@
             border-color: #3b82f6;
         }
         
-        /* Contact Section */
+        /* Contact Section - محسّن */
         .contact-container {
             display: grid;
             grid-template-columns: 1fr 1fr;
             gap: 4rem;
             margin-top: 3rem;
+        }
+        
+        @media (max-width: 1024px) {
+            .contact-container {
+                grid-template-columns: 1fr;
+                gap: 3rem;
+            }
         }
         
         .contact-info {
@@ -1196,6 +1470,9 @@
             padding: 2.5rem;
             border: 1px solid rgba(255, 255, 255, 0.1);
             box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2);
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
         }
         
         .light-mode .contact-info {
@@ -1208,16 +1485,23 @@
             display: flex;
             align-items: center;
             gap: 1.5rem;
-            margin-bottom: 2rem;
             padding: 1.5rem;
             border-radius: 15px;
             transition: all 0.3s ease;
             cursor: pointer;
+            background: rgba(255, 255, 255, 0.03);
+            border: 1px solid rgba(255, 255, 255, 0.05);
         }
         
         .contact-method:hover {
             background: rgba(59, 130, 246, 0.1);
+            border-color: rgba(59, 130, 246, 0.3);
             transform: translateX(-10px);
+        }
+        
+        .light-mode .contact-method {
+            background: rgba(30, 41, 59, 0.03);
+            border: 1px solid rgba(30, 41, 59, 0.05);
         }
         
         .contact-icon {
@@ -1230,6 +1514,7 @@
             justify-content: center;
             color: #3b82f6;
             font-size: 1.5rem;
+            flex-shrink: 0;
         }
         
         .contact-details h4 {
@@ -1252,7 +1537,7 @@
             color: #64748b;
         }
         
-        /* Contact Form */
+        /* Contact Form - محسّن */
         .contact-form {
             background: var(--gradient-card);
             border-radius: 25px;
@@ -1283,7 +1568,8 @@
             color: #1e293b;
         }
         
-        .form-input {
+        .form-input,
+        .form-textarea {
             width: 100%;
             padding: 1rem 1.5rem;
             border-radius: 12px;
@@ -1295,13 +1581,15 @@
             transition: all 0.3s ease;
         }
         
-        .light-mode .form-input {
+        .light-mode .form-input,
+        .light-mode .form-textarea {
             background: rgba(30, 41, 59, 0.05);
             border: 2px solid rgba(30, 41, 59, 0.1);
             color: #1e293b;
         }
         
-        .form-input:focus {
+        .form-input:focus,
+        .form-textarea:focus {
             outline: none;
             border-color: #3b82f6;
             background: rgba(59, 130, 246, 0.05);
@@ -1324,6 +1612,14 @@
             z-index: 100;
         }
         
+        @media (max-width: 768px) {
+            .floating-buttons {
+                bottom: 1rem;
+                left: 1rem;
+                gap: 0.8rem;
+            }
+        }
+        
         .floating-btn {
             width: 60px;
             height: 60px;
@@ -1338,6 +1634,15 @@
             transition: all 0.3s ease;
             position: relative;
             overflow: hidden;
+            text-decoration: none;
+        }
+        
+        @media (max-width: 768px) {
+            .floating-btn {
+                width: 50px;
+                height: 50px;
+                font-size: 1.2rem;
+            }
         }
         
         .floating-btn::before {
@@ -1407,6 +1712,7 @@
             transform: translateY(100px);
             opacity: 0;
             transition: all 0.4s ease;
+            max-width: 400px;
         }
         
         .toast.show {
@@ -1422,151 +1728,282 @@
             background: #f59e0b;
         }
         
-        /* Responsive Design */
-        @media (max-width: 1200px) {
-            .hero-container {
-                flex-direction: column;
-                text-align: center;
-            }
-            
-            .hero-content {
-                max-width: 100%;
-            }
-            
-            .profile-image-container {
-                width: 350px;
-                height: 350px;
-            }
-            
-            .contact-container {
-                grid-template-columns: 1fr;
-            }
+        /* Footer - محسّن */
+        footer {
+            background: #0f172a;
+            padding: 4rem 2rem 2rem;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
         }
         
-        @media (max-width: 992px) {
-            .section-title {
-                font-size: 2.2rem;
-            }
-            
-            .hero-title {
-                font-size: 2.8rem;
-            }
-            
-            .hero-subtitle {
-                font-size: 1.5rem;
-            }
-            
-            .skills-grid {
-                grid-template-columns: 1fr;
-                gap: 2rem;
-            }
-            
-            .projects-grid {
-                grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+        .light-mode footer {
+            background: #f1f5f9;
+        }
+        
+        .footer-container {
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+        
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 3rem;
+            margin-bottom: 3rem;
+        }
+        
+        @media (max-width: 1024px) {
+            .footer-content {
+                grid-template-columns: repeat(2, 1fr);
             }
         }
         
         @media (max-width: 768px) {
-            :root {
-                --header-height: 60px;
-            }
-            
-            .header-container {
-                padding: 0 1rem;
-            }
-            
-            .search-container {
-                display: none;
-            }
-            
-            .mobile-menu-button {
-                display: flex;
-            }
-            
-            .social-icons-container {
-                display: none;
-            }
-            
-            .section-container {
-                padding: 3rem 1rem;
-            }
-            
-            .section-title {
-                font-size: 1.8rem;
-                margin-bottom: 2rem;
-            }
-            
-            .stats-container {
-                grid-template-columns: repeat(2, 1fr);
-                gap: 1rem;
-            }
-            
-            .stat-card {
-                padding: 1.5rem;
-            }
-            
-            .hero-title {
-                font-size: 2.2rem;
-            }
-            
-            .hero-subtitle {
-                font-size: 1.2rem;
-            }
-            
-            .hero-buttons {
-                flex-direction: column;
-            }
-            
-            .profile-image-container {
-                width: 280px;
-                height: 280px;
-            }
-            
-            .skill-category {
-                padding: 1.5rem;
-            }
-            
-            .projects-grid {
+            .footer-content {
                 grid-template-columns: 1fr;
-            }
-            
-            .floating-buttons {
-                bottom: 1rem;
-                left: 1rem;
-            }
-            
-            .floating-btn {
-                width: 50px;
-                height: 50px;
-                font-size: 1.2rem;
+                gap: 2rem;
             }
         }
         
-        @media (max-width: 480px) {
-            .hero-title {
-                font-size: 1.8rem;
+        .footer-logo {
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+        }
+        
+        .footer-brand {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+        
+        .footer-logo-icon {
+            width: 50px;
+            height: 50px;
+            background: var(--gradient-accent);
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            color: white;
+        }
+        
+        .footer-brand-text {
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .footer-brand-name {
+            font-size: 1.5rem;
+            font-weight: 900;
+            color: white;
+            background: linear-gradient(135deg, #3b82f6 0%, #6366f1 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        
+        .light-mode .footer-brand-name {
+            background: linear-gradient(135deg, #3b82f6 0%, #6366f1 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        
+        .footer-brand-title {
+            font-size: 0.9rem;
+            color: #94a3b8;
+        }
+        
+        .light-mode .footer-brand-title {
+            color: #64748b;
+        }
+        
+        .footer-description {
+            color: #94a3b8;
+            line-height: 1.7;
+            font-size: 0.95rem;
+        }
+        
+        .light-mode .footer-description {
+            color: #64748b;
+        }
+        
+        .footer-links h3,
+        .footer-services h3,
+        .footer-newsletter h3 {
+            font-size: 1.3rem;
+            font-weight: 800;
+            color: white;
+            margin-bottom: 1.5rem;
+            position: relative;
+            padding-bottom: 0.8rem;
+        }
+        
+        .light-mode .footer-links h3,
+        .light-mode .footer-services h3,
+        .light-mode .footer-newsletter h3 {
+            color: #1e293b;
+        }
+        
+        .footer-links h3::after,
+        .footer-services h3::after,
+        .footer-newsletter h3::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            width: 40px;
+            height: 3px;
+            background: var(--gradient-accent);
+            border-radius: 3px;
+        }
+        
+        .footer-links ul,
+        .footer-services ul {
+            list-style: none;
+            display: flex;
+            flex-direction: column;
+            gap: 0.8rem;
+        }
+        
+        .footer-links a,
+        .footer-services a {
+            color: #94a3b8;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        
+        .light-mode .footer-links a,
+        .light-mode .footer-services a {
+            color: #64748b;
+        }
+        
+        .footer-links a:hover,
+        .footer-services a:hover {
+            color: #3b82f6;
+            transform: translateX(-5px);
+        }
+        
+        .footer-links a i,
+        .footer-services a i {
+            font-size: 0.8rem;
+            color: #3b82f6;
+        }
+        
+        .footer-newsletter p {
+            color: #94a3b8;
+            margin-bottom: 1.5rem;
+            font-size: 0.95rem;
+        }
+        
+        .light-mode .footer-newsletter p {
+            color: #64748b;
+        }
+        
+        .newsletter-form {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+        }
+        
+        .newsletter-input {
+            padding: 0.8rem 1rem;
+            border-radius: 10px;
+            border: 2px solid rgba(255, 255, 255, 0.1);
+            background: rgba(255, 255, 255, 0.05);
+            color: white;
+            font-family: 'Cairo', sans-serif;
+        }
+        
+        .light-mode .newsletter-input {
+            background: rgba(30, 41, 59, 0.05);
+            border: 2px solid rgba(30, 41, 59, 0.1);
+            color: #1e293b;
+        }
+        
+        .footer-bottom {
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            padding-top: 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 1.5rem;
+        }
+        
+        @media (max-width: 768px) {
+            .footer-bottom {
+                flex-direction: column;
+                text-align: center;
             }
-            
-            .hero-description {
-                font-size: 1rem;
+        }
+        
+        .copyright {
+            color: #94a3b8;
+            font-size: 0.9rem;
+        }
+        
+        .light-mode .copyright {
+            color: #64748b;
+        }
+        
+        .footer-social {
+            display: flex;
+            gap: 0.8rem;
+        }
+        
+        /* Animations */
+        @keyframes shimmer {
+            0% { transform: translateX(-100%); }
+            100% { transform: translateX(100%); }
+        }
+        
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
             }
-            
-            .profile-image-container {
-                width: 250px;
-                height: 250px;
+            to {
+                opacity: 1;
+                transform: translateY(0);
             }
-            
-            .stat-card {
-                padding: 1rem;
-            }
-            
-            .stat-number {
-                font-size: 2rem;
-            }
-            
-            .mobile-menu {
-                width: 100%;
-            }
+        }
+        
+        /* Scrollbar */
+        ::-webkit-scrollbar {
+            width: 10px;
+        }
+        
+        ::-webkit-scrollbar-track {
+            background: #1e293b;
+        }
+        
+        .light-mode ::-webkit-scrollbar-track {
+            background: #f1f5f9;
+        }
+        
+        ::-webkit-scrollbar-thumb {
+            background: #3b82f6;
+            border-radius: 5px;
+        }
+        
+        ::-webkit-scrollbar-thumb:hover {
+            background: #2563eb;
+        }
+        
+        /* Loading */
+        .loading {
+            display: inline-block;
+            width: 50px;
+            height: 50px;
+            border: 3px solid rgba(59, 130, 246, 0.3);
+            border-radius: 50%;
+            border-top-color: #3b82f6;
+            animation: spin 1s ease-in-out infinite;
         }
     </style>
 </head>
@@ -1737,7 +2174,7 @@
      
         </div>
     </section>
-    
+
     <!-- About Section -->
     <section id="about" class="section-container">
         <div style="max-width: 1400px; margin: 0 auto; padding: 0 2rem;">
@@ -1745,27 +2182,7 @@
             
             <div class="contact-container">
                 <div class="contact-info" data-aos="fade-right">
-                    <div class="contact-method">
-                        <div class="contact-icon">
-                            <i class="fas fa-map-marker-alt"></i>
-                        </div>
-                        <div class="contact-details">
-                            <h4>الموقع</h4>
-                            <p>الشرقية، مصر</p>
-                        </div>
-                    </div>
-                    
-                    <div class="contact-method">
-                        <div class="contact-icon">
-                            <i class="fas fa-envelope"></i>
-                        </div>
-                        <div class="contact-details">
-                            <h4>البريد الإلكتروني</h4>
-                            <p>md.cyberx@gmail.com</p>
-                        </div>
-                    </div>
-                    
-                    <div class="contact-method">
+                    <div class="contact-method" onclick="window.location.href='tel:+201123961290'">
                         <div class="contact-icon">
                             <i class="fas fa-phone"></i>
                         </div>
@@ -1775,13 +2192,54 @@
                         </div>
                     </div>
                     
-                    <div class="contact-method">
+                    <div class="contact-method" onclick="window.location.href='mailto:md.cyberx@gmail.com'">
                         <div class="contact-icon">
-                            <i class="fas fa-globe"></i>
+                            <i class="fas fa-envelope"></i>
                         </div>
                         <div class="contact-details">
-                            <h4>الموقع الإلكتروني</h4>
-                            <p>mahmoud-cyberx.github.io</p>
+                            <h4>البريد الإلكتروني</h4>
+                            <p>md.cyberx@gmail.com</p>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-method" onclick="window.open('https://goo.gl/maps/example', '_blank')">
+                        <div class="contact-icon">
+                            <i class="fas fa-map-marker-alt"></i>
+                        </div>
+                        <div class="contact-details">
+                            <h4>الموقع</h4>
+                            <p>الشرقية، مصر</p>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-method" onclick="window.open('https://t.me/mg_Cyber_X', '_blank')">
+                        <div class="contact-icon">
+                            <i class="fab fa-telegram"></i>
+                        </div>
+                        <div class="contact-details">
+                            <h4>Telegram</h4>
+                            <p>@mg_Cyber_X</p>
+                        </div>
+                    </div>
+                    
+                    <div style="margin-top: 1rem;">
+                        <h4 style="color: white; font-size: 1.2rem; margin-bottom: 1rem; font-weight: 600;">
+                            <i class="fas fa-share-alt" style="margin-left: 8px;"></i>
+                            تابعني
+                        </h4>
+                        <div style="display: flex; gap: 0.8rem; flex-wrap: wrap;">
+                            <a href="https://www.facebook.com/profile.php?id=61582680613004" class="social-icon facebook" target="_blank">
+                                <i class="fab fa-facebook-f"></i>
+                            </a>
+                            <a href="https://t.me/mg_Cyber_X" class="social-icon telegram" target="_blank">
+                                <i class="fab fa-telegram"></i>
+                            </a>
+                            <a href="https://www.instagram.com/mahmoud_eng_official/?__pwa=1" class="social-icon instagram" target="_blank">
+                                <i class="fab fa-instagram"></i>
+                            </a>
+                            <a href="https://www.youtube.com/@Mahmoud_Eng_Official" class="social-icon youtube" target="_blank">
+                                <i class="fab fa-youtube"></i>
+                            </a>
                         </div>
                     </div>
                 </div>
@@ -1802,22 +2260,22 @@
                         أؤمن بكتابة كود نظيف وفعال وتنفيذ إجراءات أمان قوية من البداية.
                     </p>
                     
-                    <div style="display: flex; gap: 1rem; flex-wrap: wrap;">
-                        <span style="padding: 0.7rem 1.2rem; background: rgba(59, 130, 246, 0.2); color: #3b82f6; border-radius: 12px; font-weight: 600;">
+                    <div style="display: flex; gap: 1rem; flex-wrap: wrap; margin-bottom: 2rem;">
+                        <span style="padding: 0.7rem 1.2rem; background: rgba(59, 130, 246, 0.2); color: #3b82f6; border-radius: 12px; font-weight: 600; display: flex; align-items: center; gap: 0.5rem;">
                             <i class="fas fa-code"></i>
                             تطوير الويب
                         </span>
-                        <span style="padding: 0.7rem 1.2rem; background: rgba(16, 185, 129, 0.2); color: #10b981; border-radius: 12px; font-weight: 600;">
+                        <span style="padding: 0.7rem 1.2rem; background: rgba(16, 185, 129, 0.2); color: #10b981; border-radius: 12px; font-weight: 600; display: flex; align-items: center; gap: 0.5rem;">
                             <i class="fas fa-shield-alt"></i>
                             الأمن السيبراني
                         </span>
-                        <span style="padding: 0.7rem 1.2rem; background: rgba(245, 158, 11, 0.2); color: #f59e0b; border-radius: 12px; font-weight: 600;">
+                        <span style="padding: 0.7rem 1.2rem; background: rgba(245, 158, 11, 0.2); color: #f59e0b; border-radius: 12px; font-weight: 600; display: flex; align-items: center; gap: 0.5rem;">
                             <i class="fas fa-mobile-alt"></i>
                             تطوير التطبيقات
                         </span>
                     </div>
                     
-                    <a href="#" class="btn btn-primary" style="margin-top: 2rem; width: 100%;">
+                    <a href="#" class="btn btn-primary" style="width: 100%;">
                         <i class="fas fa-download"></i>
                         تحميل السيرة الذاتية
                     </a>
@@ -1841,7 +2299,10 @@
                     
                     <div class="skill-item">
                         <div class="skill-header">
-                            <div class="skill-name">HTML/CSS</div>
+                            <div class="skill-name">
+                                <i class="fab fa-html5"></i>
+                                HTML/CSS
+                            </div>
                             <div class="skill-percentage">95%</div>
                         </div>
                         <div class="skill-bar">
@@ -1851,7 +2312,10 @@
                     
                     <div class="skill-item">
                         <div class="skill-header">
-                            <div class="skill-name">JavaScript</div>
+                            <div class="skill-name">
+                                <i class="fab fa-js-square"></i>
+                                JavaScript
+                            </div>
                             <div class="skill-percentage">90%</div>
                         </div>
                         <div class="skill-bar">
@@ -1861,7 +2325,10 @@
                     
                     <div class="skill-item">
                         <div class="skill-header">
-                            <div class="skill-name">React</div>
+                            <div class="skill-name">
+                                <i class="fab fa-react"></i>
+                                React
+                            </div>
                             <div class="skill-percentage">88%</div>
                         </div>
                         <div class="skill-bar">
@@ -1871,11 +2338,27 @@
                     
                     <div class="skill-item">
                         <div class="skill-header">
-                            <div class="skill-name">Node.js</div>
+                            <div class="skill-name">
+                                <i class="fab fa-node-js"></i>
+                                Node.js
+                            </div>
                             <div class="skill-percentage">85%</div>
                         </div>
                         <div class="skill-bar">
                             <div class="skill-progress" style="width: 85%;"></div>
+                        </div>
+                    </div>
+                    
+                    <div class="skill-item">
+                        <div class="skill-header">
+                            <div class="skill-name">
+                                <i class="fab fa-python"></i>
+                                Python
+                            </div>
+                            <div class="skill-percentage">80%</div>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-progress" style="width: 80%;"></div>
                         </div>
                     </div>
                 </div>
@@ -1889,7 +2372,10 @@
                     
                     <div class="skill-item">
                         <div class="skill-header">
-                            <div class="skill-name">الأمن السيبراني</div>
+                            <div class="skill-name">
+                                <i class="fas fa-shield-alt"></i>
+                                الأمن السيبراني
+                            </div>
                             <div class="skill-percentage">92%</div>
                         </div>
                         <div class="skill-bar">
@@ -1899,7 +2385,10 @@
                     
                     <div class="skill-item">
                         <div class="skill-header">
-                            <div class="skill-name">تصميم واجهة المستخدم</div>
+                            <div class="skill-name">
+                                <i class="fas fa-palette"></i>
+                                تصميم واجهة المستخدم
+                            </div>
                             <div class="skill-percentage">80%</div>
                         </div>
                         <div class="skill-bar">
@@ -1909,7 +2398,10 @@
                     
                     <div class="skill-item">
                         <div class="skill-header">
-                            <div class="skill-name">DevOps</div>
+                            <div class="skill-name">
+                                <i class="fas fa-server"></i>
+                                DevOps
+                            </div>
                             <div class="skill-percentage">75%</div>
                         </div>
                         <div class="skill-bar">
@@ -1919,13 +2411,242 @@
                     
                     <div class="skill-item">
                         <div class="skill-header">
-                            <div class="skill-name">إدارة المشاريع</div>
+                            <div class="skill-name">
+                                <i class="fas fa-tasks"></i>
+                                إدارة المشاريع
+                            </div>
                             <div class="skill-percentage">85%</div>
                         </div>
                         <div class="skill-bar">
                             <div class="skill-progress" style="width: 85%;"></div>
                         </div>
                     </div>
+                    
+                    <div class="skill-item">
+                        <div class="skill-header">
+                            <div class="skill-name">
+                                <i class="fas fa-chart-line"></i>
+                                تحليل البيانات
+                            </div>
+                            <div class="skill-percentage">70%</div>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-progress" style="width: 70%;"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Cybersecurity Section -->
+    <section id="cybersecurity" class="section-container">
+        <div style="max-width: 1400px; margin: 0 auto; padding: 0 2rem;">
+            <h2 class="section-title" data-aos="fade-up">الأمن السيبراني</h2>
+            
+            <div class="cyber-grid">
+                <!-- Red Team -->
+                <div class="cyber-team red-team" data-aos="fade-right">
+                    <div class="cyber-team-header">
+                        <div class="cyber-team-icon">
+                            <i class="fas fa-crosshairs"></i>
+                        </div>
+                        <h3 class="cyber-team-title">Red Team</h3>
+                    </div>
+                    
+                    <p class="cyber-team-description">
+                        فريق الهجوم المسؤول عن محاكاة تهديدات القراصنة لاختبار دفاعات النظام. 
+                        نستخدم أحدث أدوات وأساليب الاختراق لتحديد نقاط الضعف وتحسين الأمان.
+                    </p>
+                    
+                    <div style="margin-top: 2rem;">
+                        <h4 style="color: white; font-size: 1.3rem; margin-bottom: 1.5rem; font-weight: 700;">
+                            <i class="fas fa-tools" style="margin-left: 8px; color: #dc2626;"></i>
+                            أدوات Red Team
+                        </h4>
+                        
+                        <div class="tools-grid">
+                            <div class="tool-card">
+                                <div class="tool-header">
+                                    <div class="tool-icon">
+                                        <i class="fas fa-terminal"></i>
+                                    </div>
+                                    <div class="tool-title">Metasploit</div>
+                                </div>
+                                <p class="tool-description">
+                                    إطار عمل لاختبار الاختراق وتطوير الثغرات الأمنية
+                                </p>
+                            </div>
+                            
+                            <div class="tool-card">
+                                <div class="tool-header">
+                                    <div class="tool-icon">
+                                        <i class="fas fa-network-wired"></i>
+                                    </div>
+                                    <div class="tool-title">Nmap</div>
+                                </div>
+                                <p class="tool-description">
+                                    مسح الشبكات واكتشاف الملفات المفتوحة والخدمات
+                                </p>
+                            </div>
+                            
+                            <div class="tool-card">
+                                <div class="tool-header">
+                                    <div class="tool-icon">
+                                        <i class="fas fa-bug"></i>
+                                    </div>
+                                    <div class="tool-title">Burp Suite</div>
+                                </div>
+                                <p class="tool-description">
+                                    اختبار أمان تطبيقات الويب واكتشاف الثغرات
+                                </p>
+                            </div>
+                            
+                            <div class="tool-card">
+                                <div class="tool-header">
+                                    <div class="tool-icon">
+                                        <i class="fas fa-user-secret"></i>
+                                    </div>
+                                    <div class="tool-title">John the Ripper</div>
+                                </div>
+                                <p class="tool-description">
+                                    كسر كلمات المرور وتحليل قوة الحماية
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div style="margin-top: 2rem;">
+                        <h4 style="color: white; font-size: 1.3rem; margin-bottom: 1rem; font-weight: 700;">
+                            <i class="fas fa-list-check" style="margin-left: 8px; color: #dc2626;"></i>
+                            الخدمات المقدمة
+                        </h4>
+                        <ul style="color: #94a3b8; padding-right: 1.5rem; display: flex; flex-direction: column; gap: 0.8rem;">
+                            <li style="display: flex; align-items: center; gap: 0.5rem;">
+                                <i class="fas fa-check" style="color: #dc2626;"></i>
+                                اختبار الاختراق (Penetration Testing)
+                            </li>
+                            <li style="display: flex; align-items: center; gap: 0.5rem;">
+                                <i class="fas fa-check" style="color: #dc2626;"></i>
+                                تقييم الثغرات الأمنية
+                            </li>
+                            <li style="display: flex; align-items: center; gap: 0.5rem;">
+                                <i class="fas fa-check" style="color: #dc2626;"></i>
+                                محاكاة هجمات القراصنة
+                            </li>
+                            <li style="display: flex; align-items: center; gap: 0.5rem;">
+                                <i class="fas fa-check" style="color: #dc2626;"></i>
+                                تدقيق الأمان والتقارير
+                            </li>
+                        </ul>
+                    </div>
+                    
+                    <a href="#contact" class="btn btn-danger" style="margin-top: 2rem; width: 100%;">
+                        <i class="fas fa-bullseye"></i>
+                        طلب خدمة Red Team
+                    </a>
+                </div>
+                
+                <!-- Blue Team -->
+                <div class="cyber-team blue-team" data-aos="fade-left">
+                    <div class="cyber-team-header">
+                        <div class="cyber-team-icon">
+                            <i class="fas fa-shield-alt"></i>
+                        </div>
+                        <h3 class="cyber-team-title">Blue Team</h3>
+                    </div>
+                    
+                    <p class="cyber-team-description">
+                        فريق الدفاع المسؤول عن حماية الأنظمة والشبكات من الهجمات. 
+                        نطور حلول أمنية متكاملة ونتابع التهديدات في الوقت الفعلي.
+                    </p>
+                    
+                    <div style="margin-top: 2rem;">
+                        <h4 style="color: white; font-size: 1.3rem; margin-bottom: 1.5rem; font-weight: 700;">
+                            <i class="fas fa-tools" style="margin-left: 8px; color: #2563eb;"></i>
+                            أدوات Blue Team
+                        </h4>
+                        
+                        <div class="tools-grid">
+                            <div class="tool-card">
+                                <div class="tool-header">
+                                    <div class="tool-icon">
+                                        <i class="fas fa-eye"></i>
+                                    </div>
+                                    <div class="tool-title">SIEM</div>
+                                </div>
+                                <p class="tool-description">
+                                    مراقبة وتحليل الأمان في الوقت الحقيقي
+                                </p>
+                            </div>
+                            
+                            <div class="tool-card">
+                                <div class="tool-header">
+                                    <div class="tool-icon">
+                                        <i class="fas fa-virus"></i>
+                                    </div>
+                                    <div class="tool-title">Antivirus</div>
+                                </div>
+                                <p class="tool-description">
+                                    حماية متقدمة من البرمجيات الضارة والفيروسات
+                                </p>
+                            </div>
+                            
+                            <div class="tool-card">
+                                <div class="tool-header">
+                                    <div class="tool-icon">
+                                        <i class="fas fa-fire"></i>
+                                    </div>
+                                    <div class="tool-title">Firewall</div>
+                                </div>
+                                <p class="tool-description">
+                                    جدران حماية ذكية للتحكم في حركة المرور
+                                </p>
+                            </div>
+                            
+                            <div class="tool-card">
+                                <div class="tool-header">
+                                    <div class="tool-icon">
+                                        <i class="fas fa-lock"></i>
+                                    </div>
+                                    <div class="tool-title">Encryption</div>
+                                </div>
+                                <p class="tool-description">
+                                    أدوات تشفير البيانات والحماية من التسرب
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div style="margin-top: 2rem;">
+                        <h4 style="color: white; font-size: 1.3rem; margin-bottom: 1rem; font-weight: 700;">
+                            <i class="fas fa-list-check" style="margin-left: 8px; color: #2563eb;"></i>
+                            الخدمات المقدمة
+                        </h4>
+                        <ul style="color: #94a3b8; padding-right: 1.5rem; display: flex; flex-direction: column; gap: 0.8rem;">
+                            <li style="display: flex; align-items: center; gap: 0.5rem;">
+                                <i class="fas fa-check" style="color: #2563eb;"></i>
+                                مراقبة الأمان والتهديدات
+                            </li>
+                            <li style="display: flex; align-items: center; gap: 0.5rem;">
+                                <i class="fas fa-check" style="color: #2563eb;"></i>
+                                استجابة للحوادث الأمنية
+                            </li>
+                            <li style="display: flex; align-items: center; gap: 0.5rem;">
+                                <i class="fas fa-check" style="color: #2563eb;"></i>
+                                إدارة هوية والوصول
+                            </li>
+                            <li style="display: flex; align-items: center; gap: 0.5rem;">
+                                <i class="fas fa-check" style="color: #2563eb;"></i>
+                                تدريب وتوعية أمنية
+                            </li>
+                        </ul>
+                    </div>
+                    
+                    <a href="#contact" class="btn btn-success" style="margin-top: 2rem; width: 100%;">
+                        <i class="fas fa-shield-alt"></i>
+                        طلب خدمة Blue Team
+                    </a>
                 </div>
             </div>
         </div>
@@ -1940,7 +2661,7 @@
                 <!-- Project 1 -->
                 <div class="project-card" data-aos="fade-up">
                     <div class="project-image">
-                        <img src="cleaning.png" alt="ClearCut">
+                        <img src="cleaning.png" alt="ClearCut" onerror="this.src='https://via.placeholder.com/400x250/1e293b/3b82f6?text=ClearCut'">
                     </div>
                     <div class="project-content">
                         <h3 class="project-title">تطبيق إزالة الخلفية من الصور</h3>
@@ -1970,7 +2691,7 @@
                 <!-- Project 2 -->
                 <div class="project-card" data-aos="fade-up" data-aos-delay="100">
                     <div class="project-image">
-                        <img src="How To Host An Online Preschool Graduation — Daycare Studio.jpg" alt="نظام إدارة الطلاب">
+                        <img src="How To Host An Online Preschool Graduation — Daycare Studio.jpg" alt="نظام إدارة الطلاب" onerror="this.src='https://via.placeholder.com/400x250/1e293b/10b981?text=Student+Management'">
                     </div>
                     <div class="project-content">
                         <h3 class="project-title">نظام إدارة الطلاب</h3>
@@ -2000,7 +2721,7 @@
                 <!-- Project 3 -->
                 <div class="project-card" data-aos="fade-up" data-aos-delay="200">
                     <div class="project-image">
-                        <img src="plo.jpg" alt="نظام إدارة الموظفين">
+                        <img src="plo.jpg" alt="نظام إدارة الموظفين" onerror="this.src='https://via.placeholder.com/400x250/1e293b/f59e0b?text=Employee+Management'">
                     </div>
                     <div class="project-content">
                         <h3 class="project-title">نظام إدارة الموظفين</h3>
@@ -2030,7 +2751,7 @@
                 <!-- Project 4 -->
                 <div class="project-card" data-aos="fade-up" data-aos-delay="300">
                     <div class="project-image">
-                        <img src="photo/gym.jpg" alt="نظام إدارة الجيم">
+                        <img src="photo/gym.jpg" alt="نظام إدارة الجيم" onerror="this.src='https://via.placeholder.com/400x250/1e293b/8b5cf6?text=Gym+Management'">
                     </div>
                     <div class="project-content">
                         <h3 class="project-title">نظام إدارة الجيم</h3>
@@ -2060,60 +2781,106 @@
         </div>
     </section>
     
-
-        <!-- Blog Section -->
-        <section class="py-16 md:py-20 section-dark">
-            <div class="container mx-auto px-6">
-                <h2 class="text-2xl md:text-3xl font-bold text-center mb-12 md:mb-16 text-white section-title" data-aos="fade-up">آخر المقالات</h2>
-                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
-                    <!-- Blog 1 -->
-                    <div class="project-card card rounded-lg overflow-hidden" data-aos="fade-up">
-                        <div class="h-40 md:h-48 overflow-hidden">
-                            <img src="photo/pet.jpg" alt="أدوات التشفير والامن السيبراني (محمود محمد مطور تطبيقات )" class="w-full h-full object-cover project-image">
+    <!-- Blog Section -->
+    <section id="blog" class="section-container">
+        <div style="max-width: 1400px; margin: 0 auto; padding: 0 2rem;">
+            <h2 class="section-title" data-aos="fade-up">آخر المقالات</h2>
+            
+            <div class="projects-grid">
+                <!-- Blog 1 -->
+                <div class="project-card" data-aos="fade-up">
+                    <div class="project-image">
+                        <img src="photo/pet.jpg" alt="أدوات التشفير" onerror="this.src='https://via.placeholder.com/400x250/1e293b/06b6d4?text=Encryption+Tools'">
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-title">التشفير بلغة Python</h3>
+                        <p class="project-description">
+                            تعرف على كيفية استخدام لغة Python في تطبيقات التشفير والأمن السيبراني. 
+                            <span style="color:#ef4444;">متوفر أداه كامله للتشفير بكل لغات البرمجه وبكل انواع التشفير.</span>
+                        </p>
+                        
+                        <div class="project-tags">
+                            <span class="project-tag">Python</span>
+                            <span class="project-tag">التشفير</span>
+                            <span class="project-tag">الأمن</span>
                         </div>
-                        <div class="p-4 md:p-6">
-                            <span class="text-sm text-accent-blue">الأمن السيبراني</span>
-                            <h3 class="text-lg md:text-xl font-semibold text-white mt-2">  التشفير بلغة Python </h3>
-                            <p class="text-gray-300 mt-2 text-sm md:text-base">تعرف على كيفية استخدام لغة Python في تطبيقات التشفير والأمن السيبراني. <span style="color:#ef4444;">متوفر أداه كامله للتشفير بكل لغات البرمجه وبكل انواع التشفير لطلب الاداه أو الاستفسار يرجي التواصل علي <a style="color: #3b82f6;" href="tel:+201123961290">اضغط للاتصال</a></span></p>
-                            <div class="mt-4 flex items-center justify-between">
-                                <span class="text-sm text-gray-400 text-xs md:text-sm">الان</span>
-                            </div>
+                        
+                        <div class="project-actions">
+                            <button onclick="showArticle('python-encryption')" class="project-btn demo">
+                                <i class="fas fa-book-open"></i>
+                                قراءة المزيد
+                            </button>
+                            <a href="tel:+201123961290" class="project-btn download">
+                                <i class="fas fa-shopping-cart"></i>
+                                طلب الأداة
+                            </a>
                         </div>
                     </div>
-                    
-                    <!-- Blog 2 -->
-                    <div class="project-card card rounded-lg overflow-hidden" data-aos="fade-up" data-aos-delay="100">
-                        <div class="h-40 md:h-48 overflow-hidden">
-                            <img src="photo/hack.jpg" alt="React Performance Article" class="w-full h-full object-cover project-image">
+                </div>
+                
+                <!-- Blog 2 -->
+                <div class="project-card" data-aos="fade-up" data-aos-delay="100">
+                    <div class="project-image">
+                        <img src="photo/hack.jpg" alt="كورسات الاختراق" onerror="this.src='https://via.placeholder.com/400x250/1e293b/ec4899?text=Hacking+Courses'">
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-title">كورسات الاختراق الأخلاقي</h3>
+                        <p class="project-description">
+                            يتوفر جمع الكورسات اللازمة للخروج كهاكر أخلاقي (الدوره بالكامل لغرض التعليم والتوعيه).
+                        </p>
+                        
+                        <div class="project-tags">
+                            <span class="project-tag">تعليم</span>
+                            <span class="project-tag">أمن</span>
+                            <span class="project-tag">اختراق أخلاقي</span>
                         </div>
-                        <div class="p-4 md:p-6">
-                            <span class="text-sm text-accent-blue"> الاختراق</span>
-                            <h3 class="text-lg md:text-xl font-semibold text-white mt-2">يتوفر جمع الكورسات الللازمه</h3>
-                            <p class="text-gray-300 mt-2 text-sm md:text-base"> للخروج ك هاكر اخلاقي (الدوره بالكامل لغرض التعليم والتوعيه)</p>
-                            <div class="mt-4 flex items-center justify-between">
-                                <span class="text-sm text-gray-400 text-xs md:text-sm">الان</span>
-                            </div>
+                        
+                        <div class="project-actions">
+                            <button onclick="showArticle('ethical-hacking')" class="project-btn demo">
+                                <i class="fas fa-book-open"></i>
+                                قراءة المزيد
+                            </button>
+                            <a href="tel:+201123961290" class="project-btn download">
+                                <i class="fas fa-graduation-cap"></i>
+                                طلب الكورسات
+                            </a>
                         </div>
                     </div>
-                    
-                    <!-- Blog 3 -->
-                    <div class="project-card card rounded-lg overflow-hidden" data-aos="fade-up" data-aos-delay="200">
-                        <div class="h-40 md:h-48 overflow-hidden">
-                            <img src="photo/tools.jpg" alt="Career Tips Article" class="w-full h-full object-cover project-image">
+                </div>
+                
+                <!-- Blog 3 -->
+                <div class="project-card" data-aos="fade-up" data-aos-delay="200">
+                    <div class="project-image">
+                        <img src="photo/tools.jpg" alt="أداة الهاكينج" onerror="this.src='https://via.placeholder.com/400x250/1e293b/f97316?text=Hacking+Tools'">
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-title">أداة الهاكينج الشاملة</h3>
+                        <p class="project-description">
+                            تتوافر آخر إصدار v3 من الأداة التي تنشئ جميع البايلودات اللتي تمكنك من تنفيذ هجمات اختراق متعددة.
+                        </p>
+                        
+                        <div class="project-tags">
+                            <span class="project-tag">أدوات</span>
+                            <span class="project-tag">هاكينج</span>
+                            <span class="project-tag">أمن</span>
                         </div>
-                        <div class="p-4 md:p-6">
-                            <span class="text-sm text-accent-blue"> أداة ال Halck</span>
-                            <h3 class="text-lg md:text-xl font-semibold text-white mt-2">  تتوافر اخر اصدار v3 </h3>
-                            <p class="text-gray-300 mt-2 text-sm md:text-base">  الاداه تنشي جميع البايلود اللتي تمكنك من تنفيذ هجمات اختراق متعددة بسهولة وفعالية.</p>
-                            <div class="mt-4 flex items-center justify-between">
-                                <span class="text-sm text-gray-400 text-xs md:text-sm">الان</span>
-                            </div>
+                        
+                        <div class="project-actions">
+                            <button onclick="showArticle('hacking-tools')" class="project-btn demo">
+                                <i class="fas fa-book-open"></i>
+                                قراءة المزيد
+                            </button>
+                            <a href="tel:+201123961290" class="project-btn download">
+                                <i class="fas fa-tools"></i>
+                                طلب الأداة
+                            </a>
                         </div>
                     </div>
                 </div>
             </div>
-        </section>
-
+        </div>
+    </section>
+    
     <!-- Contact Section -->
     <section id="contact" class="section-container">
         <div style="max-width: 1400px; margin: 0 auto; padding: 0 2rem;">
@@ -2150,16 +2917,6 @@
                         </div>
                     </div>
                     
-                    <div class="contact-method" onclick="window.open('https://www.google.com/maps/place/Mahmoud+Mohamed', '_blank')">
-                        <div class="contact-icon">
-                            <i class="fas fa-map-marker-alt"></i>
-                        </div>
-                        <div class="contact-details">
-                            <h4>الموقع</h4>
-                            <p>الشرقية، مصر</p>
-                        </div>
-                    </div>
-                    
                     <div class="contact-method" onclick="window.open('https://t.me/mg_Cyber_X', '_blank')">
                         <div class="contact-icon">
                             <i class="fab fa-telegram"></i>
@@ -2170,12 +2927,22 @@
                         </div>
                     </div>
                     
+                    <div class="contact-method" onclick="window.open('https://wa.me/201123961290', '_blank')">
+                        <div class="contact-icon">
+                            <i class="fab fa-whatsapp"></i>
+                        </div>
+                        <div class="contact-details">
+                            <h4>WhatsApp</h4>
+                            <p>+201123961290</p>
+                        </div>
+                    </div>
+                    
                     <div style="margin-top: 2rem;">
                         <h4 style="color: white; font-size: 1.2rem; margin-bottom: 1rem; font-weight: 600;">
                             <i class="fas fa-share-alt" style="margin-left: 8px;"></i>
                             تابعني
                         </h4>
-                        <div style="display: flex; gap: 0.8rem;">
+                        <div style="display: flex; gap: 0.8rem; flex-wrap: wrap;">
                             <a href="https://www.facebook.com/profile.php?id=61582680613004" class="social-icon facebook" target="_blank">
                                 <i class="fab fa-facebook-f"></i>
                             </a>
@@ -2215,6 +2982,18 @@
                         </div>
                         
                         <div class="form-group">
+                            <label class="form-label">نوع الخدمة</label>
+                            <select class="form-input" required>
+                                <option value="">اختر الخدمة المطلوبة</option>
+                                <option value="web">تطوير الويب</option>
+                                <option value="red">خدمات Red Team</option>
+                                <option value="blue">خدمات Blue Team</option>
+                                <option value="consultation">استشارة أمنية</option>
+                                <option value="other">خدمة أخرى</option>
+                            </select>
+                        </div>
+                        
+                        <div class="form-group">
                             <label class="form-label">الرسالة</label>
                             <textarea class="form-input form-textarea" placeholder="اكتب رسالتك هنا..." required></textarea>
                         </div>
@@ -2230,44 +3009,83 @@
     </section>
     
     <!-- Footer -->
-    <footer style="background: #0f172a; padding: 3rem 2rem; border-top: 1px solid rgba(255, 255, 255, 0.1);">
-        <div style="max-width: 1400px; margin: 0 auto;">
-            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 2rem;">
-                <div>
-                    <div style="display: flex; align-items: center; gap: 1rem; margin-bottom: 1rem;">
-                        <div class="logo-icon">
-                            <i class="fas fa-code"></i>
+    <footer>
+        <div class="footer-container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <div class="footer-brand">
+                        <div class="footer-logo-icon">
+                            <i class="fas fa-shield-alt"></i>
                         </div>
-                        <div>
-                            <div style="font-size: 1.5rem; font-weight: 800; color: white;">Cyber X</div>
-                            <div style="color: #94a3b8; font-size: 0.9rem;">مطور ويب ومتخصص أمن سيبراني</div>
+                        <div class="footer-brand-text">
+                            <div class="footer-brand-name">Cyber X</div>
+                            <div class="footer-brand-title">مطور ويب وأمن سيبراني</div>
                         </div>
+                    </div>
+                    <p class="footer-description">
+                        أقدم خدمات تطوير الويب والأمن السيبراني بجودة عالية وأسعار تنافسية. 
+                        حماية بياناتك هي أولويتنا القصوى.
+                    </p>
+                    <div class="footer-social">
+                        <a href="https://www.facebook.com/profile.php?id=61582680613004" class="social-icon facebook" target="_blank">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="https://t.me/mg_Cyber_X" class="social-icon telegram" target="_blank">
+                            <i class="fab fa-telegram"></i>
+                        </a>
+                        <a href="https://www.instagram.com/mahmoud_eng_official/?__pwa=1" class="social-icon instagram" target="_blank">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="https://www.linkedin.com/in/mahmoud-mohamed-aa5b76390" class="social-icon linkedin" target="_blank">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
                     </div>
                 </div>
                 
-                <div style="display: flex; gap: 1rem;">
-                    <a href="https://www.facebook.com/profile.php?id=61582680613004" class="social-icon facebook" target="_blank">
-                        <i class="fab fa-facebook-f"></i>
-                    </a>
-                    <a href="https://t.me/mg_Cyber_X" class="social-icon telegram" target="_blank">
-                        <i class="fab fa-telegram"></i>
-                    </a>
-                    <a href="https://www.instagram.com/mahmoud_eng_official/?__pwa=1" class="social-icon instagram" target="_blank">
-                        <i class="fab fa-instagram"></i>
-                    </a>
-                    <a href="https://www.linkedin.com/in/mahmoud-mohamed-aa5b76390" class="social-icon linkedin" target="_blank">
-                        <i class="fab fa-linkedin-in"></i>
-                    </a>
+                <div class="footer-links">
+                    <h3>روابط سريعة</h3>
+                    <ul>
+                        <li><a href="#home"><i class="fas fa-chevron-left"></i> الرئيسية</a></li>
+                        <li><a href="#about"><i class="fas fa-chevron-left"></i> عني</a></li>
+                        <li><a href="#skills"><i class="fas fa-chevron-left"></i> المهارات</a></li>
+                        <li><a href="#cybersecurity"><i class="fas fa-chevron-left"></i> الأمن السيبراني</a></li>
+                        <li><a href="#projects"><i class="fas fa-chevron-left"></i> المشاريع</a></li>
+                        <li><a href="#contact"><i class="fas fa-chevron-left"></i> اتصل بي</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-services">
+                    <h3>خدماتي</h3>
+                    <ul>
+                        <li><a href="#"><i class="fas fa-chevron-left"></i> تطوير الويب</a></li>
+                        <li><a href="#cybersecurity"><i class="fas fa-chevron-left"></i> خدمات Red Team</a></li>
+                        <li><a href="#cybersecurity"><i class="fas fa-chevron-left"></i> خدمات Blue Team</a></li>
+                        <li><a href="#"><i class="fas fa-chevron-left"></i> استشارات أمنية</a></li>
+                        <li><a href="#"><i class="fas fa-chevron-left"></i> تدريب وتوعية</a></li>
+                        <li><a href="#"><i class="fas fa-chevron-left"></i> صيانة المواقع</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-newsletter">
+                    <h3>النشرة الإخبارية</h3>
+                    <p>اشترك في نشرتنا الإخبارية لتصلك آخر التحديثات والعروض.</p>
+                    <form class="newsletter-form" id="newsletterForm">
+                        <input type="email" class="newsletter-input" placeholder="بريدك الإلكتروني" required>
+                        <button type="submit" class="btn btn-primary">
+                            <i class="fas fa-paper-plane"></i>
+                            اشتراك
+                        </button>
+                    </form>
                 </div>
             </div>
             
-            <div style="border-top: 1px solid rgba(255, 255, 255, 0.1); padding-top: 2rem; text-align: center;">
-                <p style="color: #94a3b8; margin-bottom: 1rem;">
-                    &copy; 2025 محمود محمد. جميع الحقوق محفوظة.
-                </p>
-                <p style="color: #94a3b8; font-size: 0.9rem;">
+            <div class="footer-bottom">
+                <div class="copyright">
+                    &copy; 2025 محمود محمد - Cyber X. جميع الحقوق محفوظة.
+                </div>
+                <div class="copyright">
                     عدد الزوار: <span id="visitor-count" style="color: #3b82f6; font-weight: 700;">0</span>
-                </p>
+                </div>
             </div>
         </div>
     </footer>
@@ -2340,7 +3158,8 @@
             duration: 800,
             easing: 'ease-in-out',
             once: true,
-            offset: 100
+            offset: 100,
+            delay: 100
         });
         
         // Theme Toggle
@@ -2353,13 +3172,23 @@
             body.classList.toggle('light-mode');
             
             const icon = themeToggle.querySelector('i');
+            const mobileIcon = mobileThemeToggle ? mobileThemeToggle.querySelector('i') : null;
+            
             if (body.classList.contains('light-mode')) {
                 icon.classList.remove('fa-moon');
                 icon.classList.add('fa-sun');
+                if (mobileIcon) {
+                    mobileIcon.classList.remove('fa-moon');
+                    mobileIcon.classList.add('fa-sun');
+                }
                 localStorage.setItem('theme', 'light');
             } else {
                 icon.classList.remove('fa-sun');
                 icon.classList.add('fa-moon');
+                if (mobileIcon) {
+                    mobileIcon.classList.remove('fa-sun');
+                    mobileIcon.classList.add('fa-moon');
+                }
                 localStorage.setItem('theme', 'dark');
             }
         }
@@ -2377,6 +3206,11 @@
             const icon = themeToggle.querySelector('i');
             icon.classList.remove('fa-moon');
             icon.classList.add('fa-sun');
+            if (mobileThemeToggle) {
+                const mobileIcon = mobileThemeToggle.querySelector('i');
+                mobileIcon.classList.remove('fa-moon');
+                mobileIcon.classList.add('fa-sun');
+            }
         }
         
         // Mobile Menu
@@ -2386,6 +3220,7 @@
         mobileMenuButton.addEventListener('click', () => {
             mobileMenu.classList.toggle('open');
             mobileMenuButton.classList.toggle('active');
+            document.body.style.overflow = mobileMenu.classList.contains('open') ? 'hidden' : '';
         });
         
         // Close mobile menu when clicking on links
@@ -2394,12 +3229,50 @@
             link.addEventListener('click', () => {
                 mobileMenu.classList.remove('open');
                 mobileMenuButton.classList.remove('active');
+                document.body.style.overflow = '';
             });
         });
         
-        // Enhanced Search Functionality
+        // Active navigation
+        const sections = document.querySelectorAll('section');
+        const navLinks = document.querySelectorAll('.nav-link, .mobile-menu-link');
+        
+        function setActiveLink() {
+            let current = '';
+            const windowHeight = window.innerHeight;
+            
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop;
+                const sectionHeight = section.clientHeight;
+                
+                if (pageYOffset >= (sectionTop - windowHeight / 3)) {
+                    current = section.getAttribute('id');
+                }
+            });
+            
+            navLinks.forEach(link => {
+                link.classList.remove('active');
+                if (link.getAttribute('href') === `#${current}`) {
+                    link.classList.add('active');
+                }
+            });
+        }
+        
+        window.addEventListener('scroll', setActiveLink);
+        
+        // Header scroll effect
+        const header = document.querySelector('.main-header');
+        
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 50) {
+                header.classList.add('scrolled');
+            } else {
+                header.classList.remove('scrolled');
+            }
+        });
+        
+        // Search functionality
         const searchBox = document.querySelector('.search-box');
-        const searchClear = document.querySelector('.search-clear');
         const searchResults = document.querySelector('.search-results');
         const searchResultsBody = document.querySelector('.search-results-body');
         const searchResultsCount = document.querySelector('.search-results-count');
@@ -2411,84 +3284,54 @@
                 description: "مطور ويب وأمن سيبراني محترف من مصر",
                 icon: "fas fa-user",
                 link: "#about",
-                category: "معلومات",
-                keywords: ["محمود", "محمد", "مطور", "ويب", "أمن", "سيبراني", "cyber", "mahmoud"]
+                category: "معلومات"
             },
             {
                 title: "مشاريع تطوير الويب",
                 description: "عرض مشاريع تطوير الويب والتطبيقات",
                 icon: "fas fa-laptop-code",
                 link: "#projects",
-                category: "مشاريع",
-                keywords: ["مشاريع", "تطوير", "ويب", "تطبيقات", "برمجة", "كود"]
+                category: "مشاريع"
             },
             {
                 title: "خدمات الأمن السيبراني",
                 description: "حماية المواقع والتطبيقات من الاختراقات",
                 icon: "fas fa-shield-alt",
-                link: "#skills",
-                category: "خدمات",
-                keywords: ["أمن", "سيبراني", "حماية", "اختراق", "أمان", "cybersecurity"]
+                link: "#cybersecurity",
+                category: "خدمات"
             },
             {
                 title: "مهارات تقنية",
                 description: "HTML, CSS, JavaScript, React, Node.js وأكثر",
                 icon: "fas fa-code",
                 link: "#skills",
-                category: "مهارات",
-                keywords: ["مهارات", "تقنية", "html", "css", "javascript", "react", "node"]
+                category: "مهارات"
             },
             {
                 title: "اتصل بي",
                 description: "طرق التواصل والاستفسار عن الخدمات",
                 icon: "fas fa-envelope",
                 link: "#contact",
-                category: "اتصال",
-                keywords: ["اتصل", "تواصل", "استفسار", "خدمات", "رسالة", "هاتف"]
+                category: "اتصال"
             },
             {
-                title: "تطبيق إزالة الخلفية",
-                description: "تطبيق ClearCut لإزالة خلفية الصور مجاناً",
-                icon: "fas fa-image",
-                link: "#projects",
-                category: "مشاريع",
-                keywords: ["تطبيق", "إزالة", "خلفية", "صور", "clearcut", "صورة"]
+                title: "Red Team Services",
+                description: "خدمات الهجوم واختبار الاختراق",
+                icon: "fas fa-crosshairs",
+                link: "#cybersecurity",
+                category: "أمن"
             },
             {
-                title: "نظام إدارة الطلاب",
-                description: "نظام متكامل لإدارة الطلاب والشهادات",
-                icon: "fas fa-graduation-cap",
-                link: "#projects",
-                category: "مشاريع",
-                keywords: ["نظام", "إدارة", "طلاب", "شهادات", "تعليم", "مدرسة"]
-            },
-            {
-                title: "نظام إدارة الموظفين",
-                description: "نظام كامل لإدارة الموظفين والرواتب",
-                icon: "fas fa-users",
-                link: "#projects",
-                category: "مشاريع",
-                keywords: ["نظام", "إدارة", "موظفين", "رواتب", "حضور", "انصراف"]
-            },
-            {
-                title: "نظام إدارة الجيم",
-                description: "لوحة تحكم لإدارة مشتركي الجيم",
-                icon: "fas fa-dumbbell",
-                link: "#projects",
-                category: "مشاريع",
-                keywords: ["نظام", "إدارة", "جيم", "رياضة", "تمارين", "مشتركين"]
+                title: "Blue Team Services",
+                description: "خدمات الدفاع وحماية الأنظمة",
+                icon: "fas fa-shield-alt",
+                link: "#cybersecurity",
+                category: "أمن"
             }
         ];
         
-        // Search functionality
         searchBox.addEventListener('input', function() {
             const query = this.value.toLowerCase().trim();
-            
-            if (query.length > 0) {
-                searchClear.classList.add('show');
-            } else {
-                searchClear.classList.remove('show');
-            }
             
             if (query.length < 2) {
                 searchResults.style.display = 'none';
@@ -2497,31 +3340,22 @@
             
             // Filter results
             const results = searchData.filter(item => {
-                return item.keywords.some(keyword => keyword.includes(query)) ||
-                       item.title.toLowerCase().includes(query) ||
-                       item.description.toLowerCase().includes(query);
+                return item.title.toLowerCase().includes(query) ||
+                       item.description.toLowerCase().includes(query) ||
+                       item.category.toLowerCase().includes(query);
             });
             
             // Display results
             displaySearchResults(results);
         });
         
-        // Clear search
-        searchClear.addEventListener('click', function() {
-            searchBox.value = '';
-            searchResults.style.display = 'none';
-            this.classList.remove('show');
-            searchBox.focus();
-        });
-        
-        // Display search results
         function displaySearchResults(results) {
             searchResultsBody.innerHTML = '';
             
             if (results.length === 0) {
                 searchResultsBody.innerHTML = `
-                    <div class="search-no-results">
-                        <i class="fas fa-search"></i>
+                    <div class="search-no-results" style="padding: 3rem 1.5rem; text-align: center; color: #94a3b8;">
+                        <i class="fas fa-search" style="font-size: 3rem; margin-bottom: 1rem; opacity: 0.5;"></i>
                         <p>لا توجد نتائج للبحث</p>
                     </div>
                 `;
@@ -2531,14 +3365,14 @@
                     const resultItem = document.createElement('div');
                     resultItem.className = 'search-result-item';
                     resultItem.innerHTML = `
-                        <div class="search-result-icon">
+                        <div class="search-result-icon" style="width: 40px; height: 40px; background: rgba(59, 130, 246, 0.2); border-radius: 10px; display: flex; align-items: center; justify-content: center; color: #3b82f6; font-size: 1.2rem;">
                             <i class="${result.icon}"></i>
                         </div>
-                        <div class="search-result-content">
-                            <div class="search-result-title">${result.title}</div>
-                            <div class="search-result-description">${result.description}</div>
+                        <div class="search-result-content" style="flex: 1;">
+                            <div class="search-result-title" style="font-weight: 700; font-size: 1rem; color: white; margin-bottom: 0.3rem;">${result.title}</div>
+                            <div class="search-result-description" style="font-size: 0.9rem; color: #94a3b8; line-height: 1.4;">${result.description}</div>
                         </div>
-                        <div class="search-result-arrow">
+                        <div class="search-result-arrow" style="color: #94a3b8; font-size: 0.9rem;">
                             <i class="fas fa-chevron-left"></i>
                         </div>
                     `;
@@ -2547,7 +3381,6 @@
                         window.location.href = result.link;
                         searchResults.style.display = 'none';
                         searchBox.value = '';
-                        searchClear.classList.remove('show');
                     });
                     
                     searchResultsBody.appendChild(resultItem);
@@ -2578,10 +3411,11 @@
             const name = this.querySelector('input[type="text"]').value;
             const email = this.querySelector('input[type="email"]').value;
             const phone = this.querySelector('input[type="tel"]').value;
+            const service = this.querySelector('select').value;
             const message = this.querySelector('textarea').value;
             
             // Create WhatsApp message
-            const whatsappMessage = `مرحباً، أنا ${name}%0Aالبريد الإلكتروني: ${email}%0Aالهاتف: ${phone}%0Aالرسالة: ${message}`;
+            const whatsappMessage = `مرحباً، أنا ${name}%0Aالبريد الإلكتروني: ${email}%0Aالهاتف: ${phone}%0Aنوع الخدمة: ${service}%0Aالرسالة: ${message}`;
             const whatsappURL = `https://wa.me/201123961290?text=${whatsappMessage}`;
             
             // Show success message
@@ -2603,6 +3437,25 @@
             }, 5000);
         });
         
+        // Newsletter form
+        const newsletterForm = document.getElementById('newsletterForm');
+        
+        newsletterForm.addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            const email = this.querySelector('input[type="email"]').value;
+            
+            toastMessage.textContent = 'شكراً لاشتراكك في النشرة الإخبارية!';
+            toast.classList.remove('error', 'warning');
+            toast.classList.add('show');
+            
+            this.reset();
+            
+            setTimeout(() => {
+                toast.classList.remove('show');
+            }, 5000);
+        });
+        
         // Statistics counter
         const statNumbers = document.querySelectorAll('.stat-number');
         
@@ -2612,7 +3465,7 @@
             const timer = setInterval(() => {
                 current += increment;
                 if (current >= target) {
-                    element.textContent = target;
+                    element.textContent = target + (element.getAttribute('data-count') > 50 ? '+' : '');
                     clearInterval(timer);
                 } else {
                     element.textContent = Math.floor(current);
@@ -2639,11 +3492,11 @@
         function updateVisitorCount() {
             let count = localStorage.getItem('visitorCount');
             if (!count) {
-                count = 0;
+                count = Math.floor(Math.random() * 100) + 100;
             } else {
                 count = parseInt(count);
+                count += 1;
             }
-            count += 1;
             localStorage.setItem('visitorCount', count);
             document.getElementById('visitor-count').textContent = count;
         }
@@ -2662,12 +3515,14 @@
         function openPasswordModal() {
             document.getElementById('passwordModal').style.display = 'flex';
             document.getElementById('passwordInput').focus();
+            document.body.style.overflow = 'hidden';
         }
         
         function closePasswordModal() {
             document.getElementById('passwordModal').style.display = 'none';
             document.getElementById('passwordInput').value = '';
             document.getElementById('passwordMessage').style.display = 'none';
+            document.body.style.overflow = '';
         }
         
         function checkPassword() {
@@ -2702,105 +3557,66 @@
             }
         });
         
-        // Smooth scrolling for anchor links
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function(e) {
-                e.preventDefault();
-                
-                const targetId = this.getAttribute('href');
-                if (targetId === '#') return;
-                
-                const targetElement = document.querySelector(targetId);
-                if (targetElement) {
-                    window.scrollTo({
-                        top: targetElement.offsetTop - 80,
-                        behavior: 'smooth'
-                    });
+        // Article modal
+        function showArticle(articleId) {
+            const articles = {
+                'python-encryption': {
+                    title: 'التشفير بلغة Python',
+                    content: 'مقال شامل عن كيفية استخدام Python في التشفير والأمن السيبراني مع أمثلة عملية.'
+                },
+                'ethical-hacking': {
+                    title: 'كورسات الاختراق الأخلاقي',
+                    content: 'مجموعة شاملة من الكورسات لتعلم الاختراق الأخلاقي من البداية إلى الاحتراف.'
+                },
+                'hacking-tools': {
+                    title: 'أداة الهاكينج الشاملة',
+                    content: 'دليل كامل لأداة الهاكينج v3 وكيفية استخدامها في اختبارات الاختراق.'
                 }
-            });
-        });
-        
-        // Add loading animation to buttons
-        document.querySelectorAll('.btn').forEach(button => {
-            button.addEventListener('click', function(e) {
-                if (this.getAttribute('href') === '#') {
-                    e.preventDefault();
-                }
-                
-                // Add ripple effect
-                const ripple = document.createElement('span');
-                const rect = this.getBoundingClientRect();
-                const size = Math.max(rect.width, rect.height);
-                const x = e.clientX - rect.left - size / 2;
-                const y = e.clientY - rect.top - size / 2;
-                
-                ripple.style.cssText = `
-                    position: absolute;
-                    border-radius: 50%;
-                    background: rgba(255, 255, 255, 0.7);
-                    transform: scale(0);
-                    animation: ripple 0.6s linear;
-                    width: ${size}px;
-                    height: ${size}px;
-                    top: ${y}px;
-                    left: ${x}px;
-                `;
-                
-                this.appendChild(ripple);
+            };
+            
+            const article = articles[articleId];
+            if (article) {
+                toastMessage.textContent = `جاري تحميل مقال "${article.title}"...`;
+                toast.classList.remove('error', 'warning');
+                toast.classList.add('show');
                 
                 setTimeout(() => {
-                    ripple.remove();
-                }, 600);
+                    toastMessage.textContent = `يمكنك التواصل لطلب ${article.title}`;
+                }, 2000);
+                
+                setTimeout(() => {
+                    toast.classList.remove('show');
+                }, 5000);
+            }
+        }
+        
+        // Add hover effect to cards
+        document.querySelectorAll('.project-card, .cyber-team, .tool-card').forEach(card => {
+            card.addEventListener('mouseenter', function() {
+                this.style.transform = 'translateY(-10px)';
+            });
+            
+            card.addEventListener('mouseleave', function() {
+                this.style.transform = 'translateY(0)';
             });
         });
         
-        // Add CSS for ripple effect
-        const style = document.createElement('style');
-        style.textContent = `
-            @keyframes ripple {
-                to {
-                    transform: scale(4);
-                    opacity: 0;
-                }
-            }
-            
-            .btn {
-                position: relative;
-                overflow: hidden;
-            }
-        `;
-        document.head.appendChild(style);
-        
-        // Initialize tooltips for social icons
+        // Initialize tooltips
         document.querySelectorAll('.social-icon').forEach(icon => {
             icon.addEventListener('mouseenter', function() {
                 const platform = this.classList[1];
                 let tooltipText = '';
                 
                 switch(platform) {
-                    case 'facebook':
-                        tooltipText = 'Facebook';
-                        break;
-                    case 'telegram':
-                        tooltipText = 'Telegram';
-                        break;
-                    case 'instagram':
-                        tooltipText = 'Instagram';
-                        break;
-                    case 'youtube':
-                        tooltipText = 'YouTube';
-                        break;
-                    case 'linkedin':
-                        tooltipText = 'LinkedIn';
-                        break;
-                    case 'whatsapp':
-                        tooltipText = 'WhatsApp';
-                        break;
-                    default:
-                        tooltipText = 'Social Media';
+                    case 'facebook': tooltipText = 'Facebook'; break;
+                    case 'telegram': tooltipText = 'Telegram'; break;
+                    case 'instagram': tooltipText = 'Instagram'; break;
+                    case 'youtube': tooltipText = 'YouTube'; break;
+                    case 'linkedin': tooltipText = 'LinkedIn'; break;
+                    case 'whatsapp': tooltipText = 'WhatsApp'; break;
+                    default: tooltipText = 'Social Media';
                 }
                 
-                // Create tooltip
                 const tooltip = document.createElement('div');
                 tooltip.className = 'social-tooltip';
                 tooltip.textContent = tooltipText;
@@ -2834,6 +3650,34 @@
                     tooltip.remove();
                 }
             });
+        });
+        
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                
+                const targetId = this.getAttribute('href');
+                if (targetId === '#') return;
+                
+                const targetElement = document.querySelector(targetId);
+                if (targetElement) {
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 80,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+        
+        // Add loading animation
+        window.addEventListener('load', () => {
+            document.body.style.opacity = '0';
+            document.body.style.transition = 'opacity 0.5s ease';
+            
+            setTimeout(() => {
+                document.body.style.opacity = '1';
+            }, 100);
         });
     </script>
 </body>
